@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-refresh-codex-usage"
+description = "Enables the refresh_codex_usage command without any pre-configured scope."
+commands.allow = ["refresh_codex_usage"]
+
+[[permission]]
+identifier = "deny-refresh-codex-usage"
+description = "Denies the refresh_codex_usage command without any pre-configured scope."
+commands.deny = ["refresh_codex_usage"]

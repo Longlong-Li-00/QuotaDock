@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-disable-claude-integration"
+description = "Enables the disable_claude_integration command without any pre-configured scope."
+commands.allow = ["disable_claude_integration"]
+
+[[permission]]
+identifier = "deny-disable-claude-integration"
+description = "Denies the disable_claude_integration command without any pre-configured scope."
+commands.deny = ["disable_claude_integration"]

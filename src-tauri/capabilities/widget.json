@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "widget",
+  "description": "The desktop widget page (Phase 3.7) may only read its own view and ask for four widget actions: open the main window, start a drag (refused while locked), and show its menu. No settings, provider refresh, notification, filesystem, shell, SQL, RPC or generic window permissions.",
+  "windows": ["widget"],
+  "permissions": ["allow-get-widget-view", "allow-open-main-window", "allow-widget-start-drag", "allow-widget-context-menu"]
+}

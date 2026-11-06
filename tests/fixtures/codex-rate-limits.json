@@ -1,0 +1,188 @@
+{
+  "_meta": {
+    "description": "Synthetic account/rateLimits/read results for parser/normalizer tests. Field names follow the codex-cli 0.162.0-alpha.2 schema; values are invented. accountId values are fake."
+  },
+  "caseA_standard": {
+    "ordinaryUsageAllowed": true,
+    "rateLimits": {
+      "limitId": "codex",
+      "primary": { "usedPercent": 28, "windowDurationMins": 300, "resetsAt": 1791400000 },
+      "secondary": { "usedPercent": 61, "windowDurationMins": 10080, "resetsAt": 1791900000 },
+      "planType": "plus"
+    },
+    "rateLimitsByLimitId": {
+      "codex": {
+        "limitId": "codex",
+        "primary": { "usedPercent": 28, "windowDurationMins": 300, "resetsAt": 1791400000 },
+        "secondary": { "usedPercent": 61, "windowDurationMins": 10080, "resetsAt": 1791900000 },
+        "planType": "plus"
+      }
+    },
+    "rateLimitResetCredits": { "availableCount": 0, "credits": null },
+    "accountId": "acct_test_000000000001",
+    "rateLimitUpsell": null
+  },
+  "caseB_weeklyInPrimaryOnly": {
+    "ordinaryUsageAllowed": true,
+    "rateLimitsByLimitId": {
+      "codex": {
+        "limitId": "codex",
+        "primary": { "usedPercent": 40, "windowDurationMins": 10080, "resetsAt": 1791900000 },
+        "secondary": null
+      }
+    },
+    "rateLimits": {
+      "limitId": "codex",
+      "primary": { "usedPercent": 40, "windowDurationMins": 10080, "resetsAt": 1791900000 },
+      "secondary": null
+    },
+    "accountId": "acct_test_000000000001"
+  },
+  "caseC_fiveHourOnly": {
+    "ordinaryUsageAllowed": true,
+    "rateLimitsByLimitId": {
+      "codex": {
+        "limitId": "codex",
+        "primary": { "usedPercent": 5, "windowDurationMins": 300, "resetsAt": 1791400000 },
+        "secondary": null
+      }
+    },
+    "rateLimits": {
+      "limitId": "codex",
+      "primary": { "usedPercent": 5, "windowDurationMins": 300, "resetsAt": 1791400000 },
+      "secondary": null
+    },
+    "accountId": "acct_test_000000000001"
+  },
+  "caseD_additionalBucket": {
+    "ordinaryUsageAllowed": true,
+    "rateLimitsByLimitId": {
+      "codex": {
+        "limitId": "codex",
+        "primary": { "usedPercent": 10, "windowDurationMins": 300, "resetsAt": 1791400000 },
+        "secondary": { "usedPercent": 20, "windowDurationMins": 10080, "resetsAt": 1791900000 }
+      },
+      "zz_metered_feature": {
+        "limitId": "zz_metered_feature",
+        "limitName": "Some Feature",
+        "normalModelSlug": "some-model",
+        "primary": { "usedPercent": 70, "windowDurationMins": 300, "resetsAt": 1791401000 },
+        "secondary": null
+      }
+    },
+    "rateLimits": {
+      "limitId": "codex",
+      "primary": { "usedPercent": 10, "windowDurationMins": 300, "resetsAt": 1791400000 },
+      "secondary": { "usedPercent": 20, "windowDurationMins": 10080, "resetsAt": 1791900000 }
+    },
+    "rateLimitResetCredits": { "availableCount": 1, "credits": null },
+    "accountId": "acct_test_000000000001"
+  },
+  "caseE_blockedResetInPast": {
+    "ordinaryUsageAllowed": false,
+    "rateLimitsByLimitId": {
+      "codex": {
+        "limitId": "codex",
+        "primary": { "usedPercent": 100, "windowDurationMins": 300, "resetsAt": 1700000000 },
+        "secondary": { "usedPercent": 100, "windowDurationMins": 10080, "resetsAt": 1700000000 },
+        "rateLimitReachedType": "rate_limit_reached"
+      }
+    },
+    "rateLimits": {
+      "limitId": "codex",
+      "primary": { "usedPercent": 100, "windowDurationMins": 300, "resetsAt": 1700000000 },
+      "secondary": { "usedPercent": 100, "windowDurationMins": 10080, "resetsAt": 1700000000 }
+    },
+    "accountId": "acct_test_000000000001"
+  },
+  "caseF_availabilityUnknown": {
+    "ordinaryUsageAllowed": null,
+    "rateLimitsByLimitId": {
+      "codex": {
+        "limitId": "codex",
+        "primary": { "usedPercent": 0, "windowDurationMins": 300, "resetsAt": 1791400000 },
+        "secondary": { "usedPercent": 0, "windowDurationMins": 10080, "resetsAt": 1791900000 }
+      }
+    },
+    "rateLimits": {
+      "limitId": "codex",
+      "primary": { "usedPercent": 0, "windowDurationMins": 300, "resetsAt": 1791400000 },
+      "secondary": { "usedPercent": 0, "windowDurationMins": 10080, "resetsAt": 1791900000 }
+    },
+    "accountId": null
+  },
+  "caseG_unknownDuration": {
+    "ordinaryUsageAllowed": true,
+    "rateLimitsByLimitId": {
+      "codex": {
+        "limitId": "codex",
+        "primary": { "usedPercent": 33, "windowDurationMins": 1440, "resetsAt": 1791450000 },
+        "secondary": { "usedPercent": 12, "windowDurationMins": 10080, "resetsAt": 1791900000 }
+      }
+    },
+    "rateLimits": {
+      "limitId": "codex",
+      "primary": { "usedPercent": 33, "windowDurationMins": 1440, "resetsAt": 1791450000 },
+      "secondary": { "usedPercent": 12, "windowDurationMins": 10080, "resetsAt": 1791900000 }
+    },
+    "accountId": "acct_test_000000000001"
+  },
+  "swappedSlots": {
+    "ordinaryUsageAllowed": true,
+    "rateLimitsByLimitId": {
+      "codex": {
+        "limitId": "codex",
+        "primary": { "usedPercent": 61, "windowDurationMins": 10080, "resetsAt": 1791900000 },
+        "secondary": { "usedPercent": 28, "windowDurationMins": 300, "resetsAt": 1791400000 }
+      }
+    },
+    "accountId": "acct_test_000000000001"
+  },
+  "duplicateFiveHour": {
+    "ordinaryUsageAllowed": true,
+    "rateLimitsByLimitId": {
+      "codex": {
+        "limitId": "codex",
+        "primary": { "usedPercent": 10, "windowDurationMins": 300, "resetsAt": 1791400000 },
+        "secondary": { "usedPercent": 90, "windowDurationMins": 300, "resetsAt": 1791401000 }
+      }
+    },
+    "accountId": "acct_test_000000000001"
+  },
+  "legacyOnly": {
+    "ordinaryUsageAllowed": true,
+    "rateLimits": {
+      "limitId": "codex",
+      "primary": { "usedPercent": 15, "windowDurationMins": 300, "resetsAt": 1791400000 },
+      "secondary": { "usedPercent": 25, "windowDurationMins": 10080, "resetsAt": 1791900000 }
+    },
+    "accountId": "acct_test_000000000001"
+  },
+  "noCodexBucket": {
+    "ordinaryUsageAllowed": true,
+    "rateLimits": {
+      "limitId": "other_feature",
+      "primary": { "usedPercent": 50, "windowDurationMins": 300, "resetsAt": 1791400000 },
+      "secondary": null
+    },
+    "rateLimitsByLimitId": {
+      "other_feature": {
+        "limitId": "other_feature",
+        "primary": { "usedPercent": 50, "windowDurationMins": 300, "resetsAt": 1791400000 },
+        "secondary": null
+      }
+    },
+    "accountId": "acct_test_000000000001"
+  },
+  "outOfRangeValues": {
+    "ordinaryUsageAllowed": "yes",
+    "rateLimitsByLimitId": {
+      "codex": {
+        "limitId": "codex",
+        "primary": { "usedPercent": 104.5, "windowDurationMins": 300, "resetsAt": 1791400000000 },
+        "secondary": { "usedPercent": "12", "windowDurationMins": 10080, "resetsAt": null }
+      }
+    },
+    "accountId": "acct_test_000000000001"
+  }
+}

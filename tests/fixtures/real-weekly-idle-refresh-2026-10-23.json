@@ -1,0 +1,3460 @@
+{
+  "_meta": {
+    "description": "Real QuotaDock observation, 2026-10-23 (Windows 11, Codex app-server 0.162.0-alpha.17.2). Weekly window 3% used with a fixed resetsAt (2026-10-29 00:21:41 local) until 02:07:57; from 02:12:58 usedPercent 0 with resetsAt = capturedAt + 7 d sliding forward with the clock (an idle window: an early, unscheduled refresh). reset-detector-v2 opened an Unknown candidate on every poll and rejected it on the next one (\"superseded by a different value before confirmation\"): the accepted reference stayed at the 02:07:57 snapshot, the old resetsAt kept being presented as confirmed, every later weekly snapshot was marked suspect_transient and no refresh event was recorded. Times, percentages, reset times, availability, credit count and bucket ids only; no account identifiers.",
+    "classifierObserved": "reset-detector-v2",
+    "timezoneOffsetMinutes": 540,
+    "snapshotIdsConsecutive": true,
+    "v2WeeklyQualities": {
+      "normal": 37,
+      "suspect_transient": 119
+    },
+    "v2Events": [
+      {
+        "event_type": "transient_backend_state",
+        "window_type": "weekly",
+        "visibility": "diagnostic",
+        "n": 118
+      },
+      {
+        "event_type": "reset_credit_count_changed",
+        "window_type": null,
+        "visibility": "diagnostic",
+        "n": 1
+      }
+    ]
+  },
+  "snapshots": [
+    {
+      "id": 9615,
+      "capturedAtMs": 1792677750227,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792695751000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9616,
+      "capturedAtMs": 1792678051912,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792696052000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200902000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9617,
+      "capturedAtMs": 1792678352659,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792696353000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9618,
+      "capturedAtMs": 1792678653554,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792696654000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9619,
+      "capturedAtMs": 1792678954326,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792696955000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9620,
+      "capturedAtMs": 1792679254970,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792697255000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9621,
+      "capturedAtMs": 1792679555598,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792697556000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9622,
+      "capturedAtMs": 1792679856219,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792697857000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9623,
+      "capturedAtMs": 1792680156940,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792698157000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9624,
+      "capturedAtMs": 1792680457710,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792698458000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9625,
+      "capturedAtMs": 1792680758420,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792698759000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9626,
+      "capturedAtMs": 1792681059052,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792699059000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9627,
+      "capturedAtMs": 1792681359738,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792699360000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9628,
+      "capturedAtMs": 1792681660418,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792699661000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9629,
+      "capturedAtMs": 1792681961065,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792699961000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9630,
+      "capturedAtMs": 1792682261887,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792700262000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9631,
+      "capturedAtMs": 1792682562455,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792700563000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9632,
+      "capturedAtMs": 1792682863070,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792700863000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9633,
+      "capturedAtMs": 1792683164248,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792701165000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9634,
+      "capturedAtMs": 1792683465042,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792701465000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9635,
+      "capturedAtMs": 1792683765710,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792701766000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9636,
+      "capturedAtMs": 1792684066389,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792702067000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9637,
+      "capturedAtMs": 1792684367462,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792702368000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9638,
+      "capturedAtMs": 1792684668078,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792702668000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9639,
+      "capturedAtMs": 1792684968769,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792702969000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9640,
+      "capturedAtMs": 1792685269346,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792703270000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9641,
+      "capturedAtMs": 1792685569904,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792703570000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9642,
+      "capturedAtMs": 1792685870482,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792703871000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9643,
+      "capturedAtMs": 1792686171416,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792704172000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9644,
+      "capturedAtMs": 1792686472046,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792704472000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9645,
+      "capturedAtMs": 1792686772805,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792704773000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9646,
+      "capturedAtMs": 1792687073470,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792705074000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9647,
+      "capturedAtMs": 1792687374093,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792705375000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9648,
+      "capturedAtMs": 1792687674848,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792705675000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9649,
+      "capturedAtMs": 1792687975557,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792705976000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9650,
+      "capturedAtMs": 1792688276183,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792706277000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9651,
+      "capturedAtMs": 1792688576784,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792706577000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9652,
+      "capturedAtMs": 1792688877680,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792706878000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 3,
+        "resetAtMs": 1793200901000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 9653,
+      "capturedAtMs": 1792689178460,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792707179000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793293979000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9654,
+      "capturedAtMs": 1792689479066,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792707480000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793294280000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9655,
+      "capturedAtMs": 1792689779672,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792707780000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793294580000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9656,
+      "capturedAtMs": 1792690080264,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792708081000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793294881000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9657,
+      "capturedAtMs": 1792690381202,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792708382000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793295182000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9658,
+      "capturedAtMs": 1792690681786,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792708682000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793295482000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9659,
+      "capturedAtMs": 1792690982572,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792708983000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793295783000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9660,
+      "capturedAtMs": 1792691283207,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792709284000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793296084000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9661,
+      "capturedAtMs": 1792691583806,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792709584000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793296384000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9662,
+      "capturedAtMs": 1792691884400,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792709885000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793296685000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9663,
+      "capturedAtMs": 1792692185280,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792710186000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793296986000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9664,
+      "capturedAtMs": 1792692485938,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792710486000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793297286000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9665,
+      "capturedAtMs": 1792692786536,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792710787000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793297587000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9666,
+      "capturedAtMs": 1792693087158,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792711088000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793297888000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9667,
+      "capturedAtMs": 1792693387718,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792711388000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793298188000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9668,
+      "capturedAtMs": 1792693688277,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792711689000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793298489000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9669,
+      "capturedAtMs": 1792693988920,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792711989000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793298789000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9670,
+      "capturedAtMs": 1792694289524,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 3,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792712290000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793299090000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9671,
+      "capturedAtMs": 1792694590133,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792712591000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793299391000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9672,
+      "capturedAtMs": 1792694890727,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792712891000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793299691000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9673,
+      "capturedAtMs": 1792695191445,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792713192000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793299992000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9674,
+      "capturedAtMs": 1792695492053,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792713493000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793300293000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9675,
+      "capturedAtMs": 1792695792737,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792713793000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793300593000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9676,
+      "capturedAtMs": 1792696093367,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792714094000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793300894000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9677,
+      "capturedAtMs": 1792696394002,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792714395000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793301195000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9678,
+      "capturedAtMs": 1792696694682,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792714695000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793301495000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9679,
+      "capturedAtMs": 1792696995284,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792714996000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793301796000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9680,
+      "capturedAtMs": 1792697295962,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792715297000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793302097000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9681,
+      "capturedAtMs": 1792697596597,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792715597000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793302397000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9682,
+      "capturedAtMs": 1792697897188,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792715898000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793302698000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9683,
+      "capturedAtMs": 1792698198406,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792716199000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793302999000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9684,
+      "capturedAtMs": 1792698499015,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792716500000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793303300000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9685,
+      "capturedAtMs": 1792698799618,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792716800000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793303600000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9686,
+      "capturedAtMs": 1792699100252,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792717101000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793303901000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9687,
+      "capturedAtMs": 1792699401041,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792717402000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793304202000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9688,
+      "capturedAtMs": 1792699701572,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792717702000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793304502000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9689,
+      "capturedAtMs": 1792700002178,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792718003000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793304803000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9690,
+      "capturedAtMs": 1792700302816,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792718303000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793305103000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9691,
+      "capturedAtMs": 1792700603421,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792718604000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793305404000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9692,
+      "capturedAtMs": 1792700904025,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792718905000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793305705000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9693,
+      "capturedAtMs": 1792701204620,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792719205000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793306005000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9694,
+      "capturedAtMs": 1792701505216,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792719506000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793306306000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9695,
+      "capturedAtMs": 1792701805770,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792719806000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793306606000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9696,
+      "capturedAtMs": 1792702106396,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792720107000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793306907000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9697,
+      "capturedAtMs": 1792702407013,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792720408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793307208000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9698,
+      "capturedAtMs": 1792702707658,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792720708000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793307508000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9699,
+      "capturedAtMs": 1792703008331,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792721009000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793307809000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9700,
+      "capturedAtMs": 1792703309007,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792721310000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793308110000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9701,
+      "capturedAtMs": 1792703609661,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792721610000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793308410000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9702,
+      "capturedAtMs": 1792703910266,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792721911000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793308711000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9703,
+      "capturedAtMs": 1792704210944,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792722212000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793309012000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9704,
+      "capturedAtMs": 1792704511593,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792722512000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793309312000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9705,
+      "capturedAtMs": 1792704812337,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792722813000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793309613000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9706,
+      "capturedAtMs": 1792705112904,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792723114000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793309914000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9707,
+      "capturedAtMs": 1792705413480,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792723414000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793310214000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9708,
+      "capturedAtMs": 1792705714119,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792723715000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793310515000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9709,
+      "capturedAtMs": 1792706014701,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792724015000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793310815000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9710,
+      "capturedAtMs": 1792706316152,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792724317000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793311117000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9711,
+      "capturedAtMs": 1792706616732,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792724617000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793311417000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9712,
+      "capturedAtMs": 1792706917313,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792724918000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793311718000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9713,
+      "capturedAtMs": 1792707217893,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792725219000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793312019000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9714,
+      "capturedAtMs": 1792707518445,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792725519000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793312319000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9715,
+      "capturedAtMs": 1792707818992,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792725820000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793312620000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9716,
+      "capturedAtMs": 1792708119540,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792726120000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793312920000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9717,
+      "capturedAtMs": 1792708420206,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792726421000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793313221000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9718,
+      "capturedAtMs": 1792708720737,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792726722000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793313522000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9719,
+      "capturedAtMs": 1792709021487,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792727022000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793313822000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9720,
+      "capturedAtMs": 1792709322171,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792727323000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793314123000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9721,
+      "capturedAtMs": 1792709622800,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792727624000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793314424000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9722,
+      "capturedAtMs": 1792709923714,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792727925000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793314725000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9723,
+      "capturedAtMs": 1792710224389,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792728225000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793315025000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9724,
+      "capturedAtMs": 1792710524963,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792728526000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793315326000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9725,
+      "capturedAtMs": 1792710825536,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792728826000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793315626000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9726,
+      "capturedAtMs": 1792711126065,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792729127000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793315927000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9727,
+      "capturedAtMs": 1792711426836,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792729428000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793316228000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9728,
+      "capturedAtMs": 1792711727431,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792729728000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793316528000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9729,
+      "capturedAtMs": 1792712028608,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792730029000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793316829000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9730,
+      "capturedAtMs": 1792712329152,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792730330000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793317130000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9731,
+      "capturedAtMs": 1792712629782,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792730631000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793317431000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9732,
+      "capturedAtMs": 1792712930570,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792730931000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793317731000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9733,
+      "capturedAtMs": 1792713231184,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792731232000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793318032000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9734,
+      "capturedAtMs": 1792713531855,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792731533000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793318333000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9735,
+      "capturedAtMs": 1792713832697,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792731834000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793318634000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9736,
+      "capturedAtMs": 1792714134734,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792732134000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793318934000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9737,
+      "capturedAtMs": 1792714435349,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792732435000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793319235000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9738,
+      "capturedAtMs": 1792714736187,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792732736000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793319536000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9739,
+      "capturedAtMs": 1792715036838,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792733036000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793319836000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9740,
+      "capturedAtMs": 1792715337435,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792733337000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793320137000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9741,
+      "capturedAtMs": 1792715638036,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792733638000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793320438000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9742,
+      "capturedAtMs": 1792715938961,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792733938000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793320738000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9743,
+      "capturedAtMs": 1792716239725,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792734239000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793321039000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9744,
+      "capturedAtMs": 1792716540331,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792734540000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793321340000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9745,
+      "capturedAtMs": 1792716840954,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792734840000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793321640000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9746,
+      "capturedAtMs": 1792717141577,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792735141000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793321941000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9747,
+      "capturedAtMs": 1792717442307,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792735442000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793322242000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9748,
+      "capturedAtMs": 1792717743018,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792735743000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793322543000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9749,
+      "capturedAtMs": 1792718044233,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792736044000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793322844000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9750,
+      "capturedAtMs": 1792718344787,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792736344000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793323144000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9751,
+      "capturedAtMs": 1792718645517,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792736645000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793323445000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9752,
+      "capturedAtMs": 1792718946119,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792736946000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793323746000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9753,
+      "capturedAtMs": 1792719247575,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792737247000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793324047000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9754,
+      "capturedAtMs": 1792719548398,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792737548000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793324348000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9755,
+      "capturedAtMs": 1792719849122,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792737849000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793324649000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9756,
+      "capturedAtMs": 1792720149937,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792738149000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793324949000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9757,
+      "capturedAtMs": 1792720450679,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792738450000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793325250000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9758,
+      "capturedAtMs": 1792720751425,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792738751000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793325551000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9759,
+      "capturedAtMs": 1792721052143,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792739052000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793325852000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9760,
+      "capturedAtMs": 1792721353006,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792739353000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793326153000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9761,
+      "capturedAtMs": 1792721653734,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792739653000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793326453000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9762,
+      "capturedAtMs": 1792721954583,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792739954000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793326754000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9763,
+      "capturedAtMs": 1792722255437,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792740255000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793327055000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9764,
+      "capturedAtMs": 1792722556890,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792740556000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793327356000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9765,
+      "capturedAtMs": 1792722857673,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792740857000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793327657000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9766,
+      "capturedAtMs": 1792723158483,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792741158000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793327958000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9767,
+      "capturedAtMs": 1792723459263,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792741459000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793328259000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9768,
+      "capturedAtMs": 1792723760202,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792741760000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793328560000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9769,
+      "capturedAtMs": 1792724061046,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792742061000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793328861000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 9770,
+      "capturedAtMs": 1792724361924,
+      "accountCheck": "match",
+      "ordinaryUsageAllowed": true,
+      "resetCreditCount": 2,
+      "bucketIds": [
+        "codex"
+      ],
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1792742362000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 0,
+        "resetAtMs": 1793329162000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    }
+  ]
+}

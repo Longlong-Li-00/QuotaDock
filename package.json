@@ -1,0 +1,23 @@
+{
+  "name": "quotadock",
+  "version": "1.1.0-rc.1",
+  "private": true,
+  "description": "QuotaDock: read-only, local-first Codex quota monitor. TypeScript Phase 1B reference + Rust Phase 2 production core.",
+  "type": "module",
+  "engines": {
+    "node": ">=23.6"
+  },
+  "scripts": {
+    "poc:codex": "node src/poc/codexUsage.ts",
+    "poc:phase2": "cargo run -q -p quotadock-core --bin quotadock-dev --",
+    "test": "node --test \"tests/**/*.test.ts\"",
+    "test:rust": "cargo test -p quotadock-core",
+    "typecheck": "tsc --noEmit -p .",
+    "parity:generate": "node scripts/gen-parity.ts",
+    "soak:report": "node scripts/soak-report.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.1",
+    "typescript": "^5.9.3"
+  }
+}

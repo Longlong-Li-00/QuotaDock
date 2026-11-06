@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-resume-monitoring"
+description = "Enables the resume_monitoring command without any pre-configured scope."
+commands.allow = ["resume_monitoring"]
+
+[[permission]]
+identifier = "deny-resume-monitoring"
+description = "Denies the resume_monitoring command without any pre-configured scope."
+commands.deny = ["resume_monitoring"]

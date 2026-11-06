@@ -1,0 +1,71 @@
+{
+  "_meta": {
+    "description": "Real account/rateLimits/read result, redacted (account/user identifiers removed).",
+    "capturedAt": "2026-10-07T14:32:31.163Z",
+    "codexCliVersion": "0.162.0-alpha.2",
+    "transport": "stdio-app-server",
+    "params": {
+      "excludeResetCreditDetails": true,
+      "supportsLunaReserve": false
+    }
+  },
+  "response": {
+    "ordinaryUsageAllowed": true,
+    "rateLimits": {
+      "limitId": "codex",
+      "limitName": null,
+      "normalModelSlug": null,
+      "primary": {
+        "usedPercent": 12,
+        "windowDurationMins": 300,
+        "resetsAt": 1791393584
+      },
+      "secondary": {
+        "usedPercent": 2,
+        "windowDurationMins": 10080,
+        "resetsAt": 1791980384
+      },
+      "credits": {
+        "hasCredits": false,
+        "unlimited": false,
+        "balance": "0"
+      },
+      "individualLimit": null,
+      "spendControlReached": false,
+      "planType": "plus",
+      "rateLimitReachedType": null
+    },
+    "rateLimitsByLimitId": {
+      "codex": {
+        "limitId": "codex",
+        "limitName": null,
+        "normalModelSlug": null,
+        "primary": {
+          "usedPercent": 12,
+          "windowDurationMins": 300,
+          "resetsAt": 1791393584
+        },
+        "secondary": {
+          "usedPercent": 2,
+          "windowDurationMins": 10080,
+          "resetsAt": 1791980384
+        },
+        "credits": {
+          "hasCredits": false,
+          "unlimited": false,
+          "balance": "0"
+        },
+        "individualLimit": null,
+        "spendControlReached": false,
+        "planType": "plus",
+        "rateLimitReachedType": null
+      }
+    },
+    "rateLimitResetCredits": {
+      "availableCount": 2,
+      "credits": null
+    },
+    "accountId": "[REDACTED]",
+    "rateLimitUpsell": null
+  }
+}

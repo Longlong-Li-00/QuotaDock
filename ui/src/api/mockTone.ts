@@ -1,0 +1,10 @@
+// Browser previews only: what the Rust `display_tone` would send. Pages never compute a tone.
+
+import type { DisplayTone } from "./types.ts";
+
+export function mockTone(remaining: number | null, current: boolean): DisplayTone {
+  if (remaining === null) return "unknown";
+  if (remaining <= 10) return "critical";
+  if (remaining <= 30) return "low";
+  return current ? "normal" : "muted";
+}

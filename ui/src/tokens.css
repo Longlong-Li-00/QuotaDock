@@ -1,0 +1,154 @@
+/* Design tokens for the main window and the widget; both entry points import this first. Windows 11
+   conventions, not macOS. Tone is always paired with text, never the only signal. */
+
+:root {
+  --font-small: "Segoe UI Variable Small", "Segoe UI", "Microsoft YaHei UI", system-ui, sans-serif;
+  --font-text: "Segoe UI Variable Text", "Segoe UI", "Microsoft YaHei UI", system-ui, sans-serif;
+  --font-display: "Segoe UI Variable Display", "Segoe UI", "Microsoft YaHei UI", system-ui, sans-serif;
+
+  /* Weights 400 and 600 only; 12px minimum (chart axis text alone stays 11px). The font shorthand
+     resets font-variant, so tabular figures are set after it. */
+  --type-caption: 400 12px/16px var(--font-small);
+  --type-caption-strong: 600 12px/16px var(--font-small);
+  --type-body: 400 14px/20px var(--font-text);
+  --type-body-strong: 600 14px/20px var(--font-text);
+  --type-title: 600 20px/28px var(--font-display);
+  --type-hero: 600 40px/48px var(--font-display);
+  --type-hero-unit: 400 20px/28px var(--font-display);
+  --type-widget-value: 600 15px/18px var(--font-text);
+
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --gutter: var(--space-24);
+  --section-gap: var(--space-24);
+  --surface-padding: var(--space-16);
+  --content-max: 840px;
+
+  --control-height: 32px;
+  --control-height-compact: 24px;
+  --row-height: 40px;
+  --row-height-help: 56px;
+
+  --radius-card: 8px; /* cards, dialogs, flyouts */
+  --radius-control: 4px;
+  --radius-meter: 3px;
+  --radius-full: 999px;
+  --meter-height: 6px;
+
+  --bg: #f3f3f3;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --text-2: #5c5c5c;
+  --hairline: rgb(0 0 0 / 8%);
+  --control-stroke: rgb(0 0 0 / 14%);
+  --meter-track: rgb(0 0 0 / 10%);
+  --accent: #0067c0;
+  --on-accent: #ffffff;
+  --ok: #0f7b0f;
+  --warn: #9d5d00;
+  --crit: #c42b1c;
+  --focus: #1a1a1a;
+  --switch-off: #8a8a8a;
+  --overlay-hover: rgb(0 0 0 / 4%);
+  --overlay-pressed: rgb(0 0 0 / 8%); /* also selected */
+  /* History chart palette, validated for both themes. */
+  --series-codex: #2f6fc1;
+  --series-claude: #c26a2e;
+  --shadow-tooltip: 0 8px 16px rgb(0 0 0 / 14%);
+  --shadow-dialog: 0 32px 64px rgb(0 0 0 / 19%), 0 2px 21px rgb(0 0 0 / 15%);
+
+  --motion-fast: 83ms; /* hover, tooltip */
+  --motion-medium: 167ms; /* switch, indicator: transform, not left */
+  --motion-slow: 250ms; /* meter width */
+  --ease: cubic-bezier(0, 0, 0, 1);
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #202020;
+    --surface: #2b2b2b;
+    --text: #f2f2f2;
+    --text-2: #a8a8a8;
+    --hairline: rgb(255 255 255 / 8%);
+    --control-stroke: rgb(255 255 255 / 14%);
+    --meter-track: rgb(255 255 255 / 12%);
+    --accent: #4cc2ff;
+    --on-accent: #000000;
+    --ok: #6ccb5f;
+    --warn: #f2b84b;
+    --crit: #ff99a4;
+    --focus: #ffffff;
+    --switch-off: #9a9a9a;
+    --overlay-hover: rgb(255 255 255 / 6%);
+    --overlay-pressed: rgb(255 255 255 / 8%);
+    --series-codex: #4f93ec;
+    --series-claude: #d4783a;
+    --shadow-tooltip: 0 8px 16px rgb(0 0 0 / 26%);
+    --shadow-dialog: 0 32px 64px rgb(0 0 0 / 37%), 0 2px 21px rgb(0 0 0 / 30%);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #202020;
+  --surface: #2b2b2b;
+  --text: #f2f2f2;
+  --text-2: #a8a8a8;
+  --hairline: rgb(255 255 255 / 8%);
+  --control-stroke: rgb(255 255 255 / 14%);
+  --meter-track: rgb(255 255 255 / 12%);
+  --accent: #4cc2ff;
+  --on-accent: #000000;
+  --ok: #6ccb5f;
+  --warn: #f2b84b;
+  --crit: #ff99a4;
+  --focus: #ffffff;
+  --switch-off: #9a9a9a;
+  --overlay-hover: rgb(255 255 255 / 6%);
+  --overlay-pressed: rgb(255 255 255 / 8%);
+  --series-codex: #4f93ec;
+  --series-claude: #d4783a;
+  --shadow-tooltip: 0 8px 16px rgb(0 0 0 / 26%);
+  --shadow-dialog: 0 32px 64px rgb(0 0 0 / 37%), 0 2px 21px rgb(0 0 0 / 30%);
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast: 0ms;
+    --motion-medium: 0ms;
+    --motion-slow: 0ms;
+  }
+}
+
+/* The system palette wins over either theme, so this list repeats the theme selectors. Parts that
+   would otherwise vanish (meter fills, switches, indicators) opt out of forced colours next to their
+   own rules and paint with these values. */
+@media (forced-colors: active) {
+  :root,
+  :root:not([data-theme="light"]),
+  :root[data-theme="dark"] {
+    --bg: Canvas;
+    --surface: Canvas;
+    --text: CanvasText;
+    --text-2: CanvasText;
+    --hairline: CanvasText;
+    --control-stroke: CanvasText;
+    --meter-track: Canvas;
+    --accent: Highlight;
+    --on-accent: HighlightText;
+    --ok: CanvasText;
+    --warn: CanvasText;
+    --crit: CanvasText;
+    --focus: Highlight;
+    --switch-off: CanvasText;
+    --series-codex: CanvasText;
+    --series-claude: Highlight;
+  }
+}

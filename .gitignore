@@ -1,0 +1,34 @@
+# Build output
+/target/
+node_modules/
+/ui/dist/
+/src-tauri/gen/
+/src-tauri/target/
+# Bridge copy for the installer, built by scripts/package-windows.ps1
+/src-tauri/binaries/
+
+# Parallel development worktrees (e.g. phase37-widget)
+/.worktrees/
+
+# QuotaDock / provider runtime data: never commit
+*.sqlite
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.db
+quotadock.lock
+health*.jsonl
+statusline.json
+claude-settings.backup-*.json
+diagnostics-*.json
+exports/
+scratchpad/
+
+# Logs, temporary files, local tool settings
+*.log
+*.tmp
+.claude/settings.local.json
+
+# OS / editor
+Thumbs.db
+.DS_Store

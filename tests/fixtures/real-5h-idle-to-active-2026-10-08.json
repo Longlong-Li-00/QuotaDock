@@ -1,0 +1,1626 @@
+{
+  "_meta": {
+    "description": "Real QuotaDock observation, 2026-10-08 (Windows 11, Codex 0.162.0-alpha.2). The 5h window was idle (sliding resetsAt) from the 02:19 natural rollover until first usage at ~11:10:08 local, when resetsAt froze at 16:10:08 and usage rose 0 -> 16 -> 18 within minutes. reset-detector-v1 kept the 5h analysis segment at snapshot #13 (02:23:33), so the 5h burn rate (1.8-1.9 pp/h) averages ~8.8 h of idle zeros. Extended through 14:05 (snapshot #107; 5h used 27%, same window, includes two 1 s resetsAt A->B->A jitters). Evidence for a future regression test (spec section 73); normalized numbers only, no account identifiers.",
+    "classifier_version": "reset-detector-v1",
+    "observed_segment_start_snapshot_id": 13,
+    "expected_segment_start": "first snapshot at/after confirmed_reset_at - 300 min (11:10:08 local)",
+    "timezone_offset_minutes": 540
+  },
+  "snapshots": [
+    {
+      "id": 13,
+      "capturedAtMs": 1791393813148,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1791411814000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 2,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 14,
+      "capturedAtMs": 1791394113682,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1791412114000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 2,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 15,
+      "capturedAtMs": 1791394414260,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1791412415000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 2,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 16,
+      "capturedAtMs": 1791394714796,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1791412715000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 2,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 17,
+      "capturedAtMs": 1791395015339,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1791413016000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 2,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 18,
+      "capturedAtMs": 1791395315938,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1791413316000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 2,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 19,
+      "capturedAtMs": 1791424844857,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1791442844000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 2,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 20,
+      "capturedAtMs": 1791424905449,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1791442905000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 2,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 21,
+      "capturedAtMs": 1791424966293,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1791442966000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 2,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 22,
+      "capturedAtMs": 1791425026824,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1791443026000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 2,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 23,
+      "capturedAtMs": 1791425308721,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1791443308000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 2,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 24,
+      "capturedAtMs": 1791425337934,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1791443338000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 2,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 25,
+      "capturedAtMs": 1791425397988,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1791443398000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 2,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 26,
+      "capturedAtMs": 1791425458532,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 0,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 2,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 27,
+      "capturedAtMs": 1791425643693,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 16,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 4,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 28,
+      "capturedAtMs": 1791425682557,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 29,
+      "capturedAtMs": 1791425743263,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 30,
+      "capturedAtMs": 1791425803836,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 31,
+      "capturedAtMs": 1791425864536,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 32,
+      "capturedAtMs": 1791426030619,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 33,
+      "capturedAtMs": 1791426040785,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 34,
+      "capturedAtMs": 1791426051901,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 35,
+      "capturedAtMs": 1791426062870,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 36,
+      "capturedAtMs": 1791426074974,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 37,
+      "capturedAtMs": 1791426086181,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 38,
+      "capturedAtMs": 1791426098208,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 39,
+      "capturedAtMs": 1791426110748,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 40,
+      "capturedAtMs": 1791426117413,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 41,
+      "capturedAtMs": 1791426124973,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 42,
+      "capturedAtMs": 1791426141651,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 43,
+      "capturedAtMs": 1791426152069,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 44,
+      "capturedAtMs": 1791426158681,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 45,
+      "capturedAtMs": 1791426165080,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 46,
+      "capturedAtMs": 1791426171640,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 47,
+      "capturedAtMs": 1791426178070,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 48,
+      "capturedAtMs": 1791426184571,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 49,
+      "capturedAtMs": 1791426191308,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 50,
+      "capturedAtMs": 1791426197823,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 51,
+      "capturedAtMs": 1791426205279,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 52,
+      "capturedAtMs": 1791426229039,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 53,
+      "capturedAtMs": 1791426258581,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 54,
+      "capturedAtMs": 1791426265478,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 55,
+      "capturedAtMs": 1791426272299,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 56,
+      "capturedAtMs": 1791426279077,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 57,
+      "capturedAtMs": 1791426285600,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 58,
+      "capturedAtMs": 1791426292125,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 59,
+      "capturedAtMs": 1791426299106,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 60,
+      "capturedAtMs": 1791426306775,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 61,
+      "capturedAtMs": 1791426313291,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 62,
+      "capturedAtMs": 1791426320437,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 63,
+      "capturedAtMs": 1791426340153,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 64,
+      "capturedAtMs": 1791426400827,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 65,
+      "capturedAtMs": 1791426461469,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 66,
+      "capturedAtMs": 1791426521969,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 67,
+      "capturedAtMs": 1791426582574,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 68,
+      "capturedAtMs": 1791426643236,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 69,
+      "capturedAtMs": 1791426699845,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 70,
+      "capturedAtMs": 1791426760266,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 71,
+      "capturedAtMs": 1791426820669,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 72,
+      "capturedAtMs": 1791426881468,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443409000,
+        "durationMins": 300,
+        "quality": "suspect_transient"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 73,
+      "capturedAtMs": 1791426941943,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 74,
+      "capturedAtMs": 1791427002529,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 75,
+      "capturedAtMs": 1791427302413,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 76,
+      "capturedAtMs": 1791427603142,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 77,
+      "capturedAtMs": 1791427903652,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 78,
+      "capturedAtMs": 1791428204259,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 79,
+      "capturedAtMs": 1791428504976,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 80,
+      "capturedAtMs": 1791428748857,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 81,
+      "capturedAtMs": 1791428809367,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 82,
+      "capturedAtMs": 1791429110002,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 83,
+      "capturedAtMs": 1791429410581,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 84,
+      "capturedAtMs": 1791429711079,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 85,
+      "capturedAtMs": 1791430011698,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 86,
+      "capturedAtMs": 1791430312644,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 87,
+      "capturedAtMs": 1791430597947,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 88,
+      "capturedAtMs": 1791430658443,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 89,
+      "capturedAtMs": 1791430718897,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 90,
+      "capturedAtMs": 1791431019114,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443409000,
+        "durationMins": 300,
+        "quality": "suspect_transient"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 91,
+      "capturedAtMs": 1791431319850,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 92,
+      "capturedAtMs": 1791431620811,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443409000,
+        "durationMins": 300,
+        "quality": "suspect_transient"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980385000,
+        "durationMins": 10080,
+        "quality": "suspect_transient"
+      }
+    },
+    {
+      "id": 93,
+      "capturedAtMs": 1791431922345,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 94,
+      "capturedAtMs": 1791432222866,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 18,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 95,
+      "capturedAtMs": 1791432523474,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 21,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 5,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 96,
+      "capturedAtMs": 1791432824647,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 27,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 6,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 97,
+      "capturedAtMs": 1791433125299,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 27,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 6,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 98,
+      "capturedAtMs": 1791433425861,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 27,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 6,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 99,
+      "capturedAtMs": 1791433726418,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 27,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 6,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 100,
+      "capturedAtMs": 1791434027052,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 27,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 6,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 101,
+      "capturedAtMs": 1791434327603,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 27,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 6,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 102,
+      "capturedAtMs": 1791434628174,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 27,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 6,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 103,
+      "capturedAtMs": 1791434928666,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 27,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 6,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 104,
+      "capturedAtMs": 1791435229486,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 27,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 6,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 105,
+      "capturedAtMs": 1791435530260,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 27,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 6,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 106,
+      "capturedAtMs": 1791435830829,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 27,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 6,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    },
+    {
+      "id": 107,
+      "capturedAtMs": 1791435906817,
+      "ordinaryUsageAllowed": true,
+      "fiveHour": {
+        "usedPercent": 27,
+        "resetAtMs": 1791443408000,
+        "durationMins": 300,
+        "quality": "normal"
+      },
+      "weekly": {
+        "usedPercent": 6,
+        "resetAtMs": 1791980384000,
+        "durationMins": 10080,
+        "quality": "normal"
+      }
+    }
+  ]
+}

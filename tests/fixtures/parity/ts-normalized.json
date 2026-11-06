@@ -1,0 +1,655 @@
+{
+  "real_redacted": {
+    "ordinaryUsageAllowed": true,
+    "availability": "allowed",
+    "fiveHour": {
+      "usedPercent": 12,
+      "remainingPercent": 88,
+      "windowDurationMins": 300,
+      "resetsAt": 1791393584,
+      "resetsAtIso": "2026-10-07T17:19:44.000Z"
+    },
+    "weekly": {
+      "usedPercent": 2,
+      "remainingPercent": 98,
+      "windowDurationMins": 10080,
+      "resetsAt": 1791980384,
+      "resetsAtIso": "2026-10-14T12:19:44.000Z"
+    },
+    "sourceBucket": "codex",
+    "buckets": {
+      "codex": {
+        "limitId": "codex",
+        "primary": {
+          "usedPercent": 12,
+          "remainingPercent": 88,
+          "windowDurationMins": 300,
+          "resetsAt": 1791393584,
+          "resetsAtIso": "2026-10-07T17:19:44.000Z"
+        },
+        "secondary": {
+          "usedPercent": 2,
+          "remainingPercent": 98,
+          "windowDurationMins": 10080,
+          "resetsAt": 1791980384,
+          "resetsAtIso": "2026-10-14T12:19:44.000Z"
+        },
+        "raw": {
+          "limitId": "codex",
+          "limitName": null,
+          "normalModelSlug": null,
+          "primary": {
+            "usedPercent": 12,
+            "windowDurationMins": 300,
+            "resetsAt": 1791393584
+          },
+          "secondary": {
+            "usedPercent": 2,
+            "windowDurationMins": 10080,
+            "resetsAt": 1791980384
+          },
+          "credits": {
+            "hasCredits": false,
+            "unlimited": false,
+            "balance": "0"
+          },
+          "individualLimit": null,
+          "spendControlReached": false,
+          "planType": "plus",
+          "rateLimitReachedType": null
+        }
+      }
+    },
+    "resetCredits": {
+      "availableCount": 2
+    },
+    "accountId": "[REDACTED]",
+    "warnings": []
+  },
+  "caseA_standard": {
+    "ordinaryUsageAllowed": true,
+    "availability": "allowed",
+    "fiveHour": {
+      "usedPercent": 28,
+      "remainingPercent": 72,
+      "windowDurationMins": 300,
+      "resetsAt": 1791400000,
+      "resetsAtIso": "2026-10-07T19:06:40.000Z"
+    },
+    "weekly": {
+      "usedPercent": 61,
+      "remainingPercent": 39,
+      "windowDurationMins": 10080,
+      "resetsAt": 1791900000,
+      "resetsAtIso": "2026-10-13T14:00:00.000Z"
+    },
+    "sourceBucket": "codex",
+    "buckets": {
+      "codex": {
+        "limitId": "codex",
+        "primary": {
+          "usedPercent": 28,
+          "remainingPercent": 72,
+          "windowDurationMins": 300,
+          "resetsAt": 1791400000,
+          "resetsAtIso": "2026-10-07T19:06:40.000Z"
+        },
+        "secondary": {
+          "usedPercent": 61,
+          "remainingPercent": 39,
+          "windowDurationMins": 10080,
+          "resetsAt": 1791900000,
+          "resetsAtIso": "2026-10-13T14:00:00.000Z"
+        },
+        "raw": {
+          "limitId": "codex",
+          "primary": {
+            "usedPercent": 28,
+            "windowDurationMins": 300,
+            "resetsAt": 1791400000
+          },
+          "secondary": {
+            "usedPercent": 61,
+            "windowDurationMins": 10080,
+            "resetsAt": 1791900000
+          },
+          "planType": "plus"
+        }
+      }
+    },
+    "resetCredits": {
+      "availableCount": 0
+    },
+    "accountId": "acct_test_000000000001",
+    "warnings": []
+  },
+  "caseB_weeklyInPrimaryOnly": {
+    "ordinaryUsageAllowed": true,
+    "availability": "allowed",
+    "fiveHour": null,
+    "weekly": {
+      "usedPercent": 40,
+      "remainingPercent": 60,
+      "windowDurationMins": 10080,
+      "resetsAt": 1791900000,
+      "resetsAtIso": "2026-10-13T14:00:00.000Z"
+    },
+    "sourceBucket": "codex",
+    "buckets": {
+      "codex": {
+        "limitId": "codex",
+        "primary": {
+          "usedPercent": 40,
+          "remainingPercent": 60,
+          "windowDurationMins": 10080,
+          "resetsAt": 1791900000,
+          "resetsAtIso": "2026-10-13T14:00:00.000Z"
+        },
+        "secondary": null,
+        "raw": {
+          "limitId": "codex",
+          "primary": {
+            "usedPercent": 40,
+            "windowDurationMins": 10080,
+            "resetsAt": 1791900000
+          },
+          "secondary": null
+        }
+      }
+    },
+    "resetCredits": null,
+    "accountId": "acct_test_000000000001",
+    "warnings": []
+  },
+  "caseC_fiveHourOnly": {
+    "ordinaryUsageAllowed": true,
+    "availability": "allowed",
+    "fiveHour": {
+      "usedPercent": 5,
+      "remainingPercent": 95,
+      "windowDurationMins": 300,
+      "resetsAt": 1791400000,
+      "resetsAtIso": "2026-10-07T19:06:40.000Z"
+    },
+    "weekly": null,
+    "sourceBucket": "codex",
+    "buckets": {
+      "codex": {
+        "limitId": "codex",
+        "primary": {
+          "usedPercent": 5,
+          "remainingPercent": 95,
+          "windowDurationMins": 300,
+          "resetsAt": 1791400000,
+          "resetsAtIso": "2026-10-07T19:06:40.000Z"
+        },
+        "secondary": null,
+        "raw": {
+          "limitId": "codex",
+          "primary": {
+            "usedPercent": 5,
+            "windowDurationMins": 300,
+            "resetsAt": 1791400000
+          },
+          "secondary": null
+        }
+      }
+    },
+    "resetCredits": null,
+    "accountId": "acct_test_000000000001",
+    "warnings": []
+  },
+  "caseD_additionalBucket": {
+    "ordinaryUsageAllowed": true,
+    "availability": "allowed",
+    "fiveHour": {
+      "usedPercent": 10,
+      "remainingPercent": 90,
+      "windowDurationMins": 300,
+      "resetsAt": 1791400000,
+      "resetsAtIso": "2026-10-07T19:06:40.000Z"
+    },
+    "weekly": {
+      "usedPercent": 20,
+      "remainingPercent": 80,
+      "windowDurationMins": 10080,
+      "resetsAt": 1791900000,
+      "resetsAtIso": "2026-10-13T14:00:00.000Z"
+    },
+    "sourceBucket": "codex",
+    "buckets": {
+      "codex": {
+        "limitId": "codex",
+        "primary": {
+          "usedPercent": 10,
+          "remainingPercent": 90,
+          "windowDurationMins": 300,
+          "resetsAt": 1791400000,
+          "resetsAtIso": "2026-10-07T19:06:40.000Z"
+        },
+        "secondary": {
+          "usedPercent": 20,
+          "remainingPercent": 80,
+          "windowDurationMins": 10080,
+          "resetsAt": 1791900000,
+          "resetsAtIso": "2026-10-13T14:00:00.000Z"
+        },
+        "raw": {
+          "limitId": "codex",
+          "primary": {
+            "usedPercent": 10,
+            "windowDurationMins": 300,
+            "resetsAt": 1791400000
+          },
+          "secondary": {
+            "usedPercent": 20,
+            "windowDurationMins": 10080,
+            "resetsAt": 1791900000
+          }
+        }
+      },
+      "zz_metered_feature": {
+        "limitId": "zz_metered_feature",
+        "primary": {
+          "usedPercent": 70,
+          "remainingPercent": 30,
+          "windowDurationMins": 300,
+          "resetsAt": 1791401000,
+          "resetsAtIso": "2026-10-07T19:23:20.000Z"
+        },
+        "secondary": null,
+        "raw": {
+          "limitId": "zz_metered_feature",
+          "limitName": "Some Feature",
+          "normalModelSlug": "some-model",
+          "primary": {
+            "usedPercent": 70,
+            "windowDurationMins": 300,
+            "resetsAt": 1791401000
+          },
+          "secondary": null
+        }
+      }
+    },
+    "resetCredits": {
+      "availableCount": 1
+    },
+    "accountId": "acct_test_000000000001",
+    "warnings": []
+  },
+  "caseE_blockedResetInPast": {
+    "ordinaryUsageAllowed": false,
+    "availability": "blocked",
+    "fiveHour": {
+      "usedPercent": 100,
+      "remainingPercent": 0,
+      "windowDurationMins": 300,
+      "resetsAt": 1700000000,
+      "resetsAtIso": "2023-11-14T22:13:20.000Z"
+    },
+    "weekly": {
+      "usedPercent": 100,
+      "remainingPercent": 0,
+      "windowDurationMins": 10080,
+      "resetsAt": 1700000000,
+      "resetsAtIso": "2023-11-14T22:13:20.000Z"
+    },
+    "sourceBucket": "codex",
+    "buckets": {
+      "codex": {
+        "limitId": "codex",
+        "primary": {
+          "usedPercent": 100,
+          "remainingPercent": 0,
+          "windowDurationMins": 300,
+          "resetsAt": 1700000000,
+          "resetsAtIso": "2023-11-14T22:13:20.000Z"
+        },
+        "secondary": {
+          "usedPercent": 100,
+          "remainingPercent": 0,
+          "windowDurationMins": 10080,
+          "resetsAt": 1700000000,
+          "resetsAtIso": "2023-11-14T22:13:20.000Z"
+        },
+        "raw": {
+          "limitId": "codex",
+          "primary": {
+            "usedPercent": 100,
+            "windowDurationMins": 300,
+            "resetsAt": 1700000000
+          },
+          "secondary": {
+            "usedPercent": 100,
+            "windowDurationMins": 10080,
+            "resetsAt": 1700000000
+          },
+          "rateLimitReachedType": "rate_limit_reached"
+        }
+      }
+    },
+    "resetCredits": null,
+    "accountId": "acct_test_000000000001",
+    "warnings": []
+  },
+  "caseF_availabilityUnknown": {
+    "ordinaryUsageAllowed": null,
+    "availability": "unknown",
+    "fiveHour": {
+      "usedPercent": 0,
+      "remainingPercent": 100,
+      "windowDurationMins": 300,
+      "resetsAt": 1791400000,
+      "resetsAtIso": "2026-10-07T19:06:40.000Z"
+    },
+    "weekly": {
+      "usedPercent": 0,
+      "remainingPercent": 100,
+      "windowDurationMins": 10080,
+      "resetsAt": 1791900000,
+      "resetsAtIso": "2026-10-13T14:00:00.000Z"
+    },
+    "sourceBucket": "codex",
+    "buckets": {
+      "codex": {
+        "limitId": "codex",
+        "primary": {
+          "usedPercent": 0,
+          "remainingPercent": 100,
+          "windowDurationMins": 300,
+          "resetsAt": 1791400000,
+          "resetsAtIso": "2026-10-07T19:06:40.000Z"
+        },
+        "secondary": {
+          "usedPercent": 0,
+          "remainingPercent": 100,
+          "windowDurationMins": 10080,
+          "resetsAt": 1791900000,
+          "resetsAtIso": "2026-10-13T14:00:00.000Z"
+        },
+        "raw": {
+          "limitId": "codex",
+          "primary": {
+            "usedPercent": 0,
+            "windowDurationMins": 300,
+            "resetsAt": 1791400000
+          },
+          "secondary": {
+            "usedPercent": 0,
+            "windowDurationMins": 10080,
+            "resetsAt": 1791900000
+          }
+        }
+      }
+    },
+    "resetCredits": null,
+    "accountId": null,
+    "warnings": []
+  },
+  "caseG_unknownDuration": {
+    "ordinaryUsageAllowed": true,
+    "availability": "allowed",
+    "fiveHour": null,
+    "weekly": {
+      "usedPercent": 12,
+      "remainingPercent": 88,
+      "windowDurationMins": 10080,
+      "resetsAt": 1791900000,
+      "resetsAtIso": "2026-10-13T14:00:00.000Z"
+    },
+    "sourceBucket": "codex",
+    "buckets": {
+      "codex": {
+        "limitId": "codex",
+        "primary": {
+          "usedPercent": 33,
+          "remainingPercent": 67,
+          "windowDurationMins": 1440,
+          "resetsAt": 1791450000,
+          "resetsAtIso": "2026-10-08T09:00:00.000Z"
+        },
+        "secondary": {
+          "usedPercent": 12,
+          "remainingPercent": 88,
+          "windowDurationMins": 10080,
+          "resetsAt": 1791900000,
+          "resetsAtIso": "2026-10-13T14:00:00.000Z"
+        },
+        "raw": {
+          "limitId": "codex",
+          "primary": {
+            "usedPercent": 33,
+            "windowDurationMins": 1440,
+            "resetsAt": 1791450000
+          },
+          "secondary": {
+            "usedPercent": 12,
+            "windowDurationMins": 10080,
+            "resetsAt": 1791900000
+          }
+        }
+      }
+    },
+    "resetCredits": null,
+    "accountId": "acct_test_000000000001",
+    "warnings": [
+      "bucket codex primary: windowDurationMins=1440 has no known class; kept as unknown"
+    ]
+  },
+  "swappedSlots": {
+    "ordinaryUsageAllowed": true,
+    "availability": "allowed",
+    "fiveHour": {
+      "usedPercent": 28,
+      "remainingPercent": 72,
+      "windowDurationMins": 300,
+      "resetsAt": 1791400000,
+      "resetsAtIso": "2026-10-07T19:06:40.000Z"
+    },
+    "weekly": {
+      "usedPercent": 61,
+      "remainingPercent": 39,
+      "windowDurationMins": 10080,
+      "resetsAt": 1791900000,
+      "resetsAtIso": "2026-10-13T14:00:00.000Z"
+    },
+    "sourceBucket": "codex",
+    "buckets": {
+      "codex": {
+        "limitId": "codex",
+        "primary": {
+          "usedPercent": 61,
+          "remainingPercent": 39,
+          "windowDurationMins": 10080,
+          "resetsAt": 1791900000,
+          "resetsAtIso": "2026-10-13T14:00:00.000Z"
+        },
+        "secondary": {
+          "usedPercent": 28,
+          "remainingPercent": 72,
+          "windowDurationMins": 300,
+          "resetsAt": 1791400000,
+          "resetsAtIso": "2026-10-07T19:06:40.000Z"
+        },
+        "raw": {
+          "limitId": "codex",
+          "primary": {
+            "usedPercent": 61,
+            "windowDurationMins": 10080,
+            "resetsAt": 1791900000
+          },
+          "secondary": {
+            "usedPercent": 28,
+            "windowDurationMins": 300,
+            "resetsAt": 1791400000
+          }
+        }
+      }
+    },
+    "resetCredits": null,
+    "accountId": "acct_test_000000000001",
+    "warnings": []
+  },
+  "duplicateFiveHour": {
+    "ordinaryUsageAllowed": true,
+    "availability": "allowed",
+    "fiveHour": null,
+    "weekly": null,
+    "sourceBucket": "codex",
+    "buckets": {
+      "codex": {
+        "limitId": "codex",
+        "primary": {
+          "usedPercent": 10,
+          "remainingPercent": 90,
+          "windowDurationMins": 300,
+          "resetsAt": 1791400000,
+          "resetsAtIso": "2026-10-07T19:06:40.000Z"
+        },
+        "secondary": {
+          "usedPercent": 90,
+          "remainingPercent": 10,
+          "windowDurationMins": 300,
+          "resetsAt": 1791401000,
+          "resetsAtIso": "2026-10-07T19:23:20.000Z"
+        },
+        "raw": {
+          "limitId": "codex",
+          "primary": {
+            "usedPercent": 10,
+            "windowDurationMins": 300,
+            "resetsAt": 1791400000
+          },
+          "secondary": {
+            "usedPercent": 90,
+            "windowDurationMins": 300,
+            "resetsAt": 1791401000
+          }
+        }
+      }
+    },
+    "resetCredits": null,
+    "accountId": "acct_test_000000000001",
+    "warnings": [
+      "bucket codex: 2 windows classify as five-hour (primary, secondary); five-hour left null"
+    ]
+  },
+  "legacyOnly": {
+    "ordinaryUsageAllowed": true,
+    "availability": "allowed",
+    "fiveHour": {
+      "usedPercent": 15,
+      "remainingPercent": 85,
+      "windowDurationMins": 300,
+      "resetsAt": 1791400000,
+      "resetsAtIso": "2026-10-07T19:06:40.000Z"
+    },
+    "weekly": {
+      "usedPercent": 25,
+      "remainingPercent": 75,
+      "windowDurationMins": 10080,
+      "resetsAt": 1791900000,
+      "resetsAtIso": "2026-10-13T14:00:00.000Z"
+    },
+    "sourceBucket": "legacy",
+    "buckets": {},
+    "resetCredits": null,
+    "accountId": "acct_test_000000000001",
+    "warnings": [
+      "rateLimitsByLimitId absent; normalized view taken from legacy rateLimits (limitId=codex)"
+    ]
+  },
+  "noCodexBucket": {
+    "ordinaryUsageAllowed": true,
+    "availability": "allowed",
+    "fiveHour": null,
+    "weekly": null,
+    "sourceBucket": null,
+    "buckets": {
+      "other_feature": {
+        "limitId": "other_feature",
+        "primary": {
+          "usedPercent": 50,
+          "remainingPercent": 50,
+          "windowDurationMins": 300,
+          "resetsAt": 1791400000,
+          "resetsAtIso": "2026-10-07T19:06:40.000Z"
+        },
+        "secondary": null,
+        "raw": {
+          "limitId": "other_feature",
+          "primary": {
+            "usedPercent": 50,
+            "windowDurationMins": 300,
+            "resetsAt": 1791400000
+          },
+          "secondary": null
+        }
+      }
+    },
+    "resetCredits": null,
+    "accountId": "acct_test_000000000001",
+    "warnings": [
+      "no \"codex\" bucket (buckets: other_feature); normalized view left empty"
+    ]
+  },
+  "outOfRangeValues": {
+    "ordinaryUsageAllowed": null,
+    "availability": "unknown",
+    "fiveHour": {
+      "usedPercent": 104.5,
+      "remainingPercent": 0,
+      "windowDurationMins": 300,
+      "resetsAt": 1791400000000,
+      "resetsAtIso": null
+    },
+    "weekly": {
+      "usedPercent": null,
+      "remainingPercent": null,
+      "windowDurationMins": 10080,
+      "resetsAt": null,
+      "resetsAtIso": null
+    },
+    "sourceBucket": "codex",
+    "buckets": {
+      "codex": {
+        "limitId": "codex",
+        "primary": {
+          "usedPercent": 104.5,
+          "remainingPercent": 0,
+          "windowDurationMins": 300,
+          "resetsAt": 1791400000000,
+          "resetsAtIso": null
+        },
+        "secondary": {
+          "usedPercent": null,
+          "remainingPercent": null,
+          "windowDurationMins": 10080,
+          "resetsAt": null,
+          "resetsAtIso": null
+        },
+        "raw": {
+          "limitId": "codex",
+          "primary": {
+            "usedPercent": 104.5,
+            "windowDurationMins": 300,
+            "resetsAt": 1791400000000
+          },
+          "secondary": {
+            "usedPercent": "12",
+            "windowDurationMins": 10080,
+            "resetsAt": null
+          }
+        }
+      }
+    },
+    "resetCredits": null,
+    "accountId": "acct_test_000000000001",
+    "warnings": [
+      "ordinaryUsageAllowed is not a boolean; treated as unknown",
+      "rateLimitsByLimitId.codex.primary: usedPercent=104.5 is outside 0..100; kept as reported",
+      "rateLimitsByLimitId.codex.primary: resetsAt=1791400000000 is outside the plausible Unix-seconds range; kept raw, not converted",
+      "rateLimitsByLimitId.codex.secondary: usedPercent is not a number"
+    ]
+  }
+}
