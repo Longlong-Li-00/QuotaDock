@@ -16,6 +16,7 @@ const BARS: [usize; 2] = [6, 18];
 const BAR_WIDTH: usize = 8;
 
 const NEUTRAL: [u8; 3] = [0x76, 0x76, 0x76];
+const CAUTION: [u8; 3] = [0xB8, 0x9A, 0x00];
 const LOW: [u8; 3] = [0xC7, 0x7C, 0x00];
 const CRITICAL: [u8; 3] = [0xC4, 0x2B, 0x1C];
 /// The track: faint, so it reads on a light and a dark taskbar. Grey, or the bar's warning colour:
@@ -37,8 +38,10 @@ pub fn bar_of(line: Option<&ProviderTrayLine>) -> Option<Bar> {
     let line = line?;
     let remaining = line.weekly_remaining?;
     let rank = |t: DisplayTone| match t {
-        DisplayTone::Critical => 3,
-        DisplayTone::Low => 2,
+        DisplayTone::Empty => 5,
+        DisplayTone::Critical => 4,
+        DisplayTone::Low => 3,
+        DisplayTone::Caution => 2,
         DisplayTone::Normal => 1,
         DisplayTone::Muted | DisplayTone::Unknown => 0,
     };
@@ -71,8 +74,9 @@ pub fn render(bars: [Option<Bar>; 2]) -> Vec<u8> {
             (if h > 0.0 { h.max(MIN_FILL) } else { 0.0 }, colour(b.tone))
         });
         let track_rgb = match bar.map(|b| b.tone) {
+            Some(DisplayTone::Caution) => CAUTION,
             Some(DisplayTone::Low) => LOW,
-            Some(DisplayTone::Critical) => CRITICAL,
+            Some(DisplayTone::Critical | DisplayTone::Empty) => CRITICAL,
             _ => NEUTRAL,
         };
         for y in 0..SIZE {
@@ -99,8 +103,9 @@ pub fn render(bars: [Option<Bar>; 2]) -> Vec<u8> {
 fn colour(tone: DisplayTone) -> ([u8; 3], f64) {
     match tone {
         DisplayTone::Normal => (NEUTRAL, 1.0),
+        DisplayTone::Caution => (CAUTION, 1.0),
         DisplayTone::Low => (LOW, 1.0),
-        DisplayTone::Critical => (CRITICAL, 1.0),
+        DisplayTone::Critical | DisplayTone::Empty => (CRITICAL, 1.0),
         DisplayTone::Muted | DisplayTone::Unknown => (NEUTRAL, MUTED_ALPHA),
     }
 }

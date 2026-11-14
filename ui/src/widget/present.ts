@@ -54,7 +54,7 @@ function noteWhen(r: WidgetReset, roomy: boolean, now: number, t: Dict, lang: La
   return r.precisionMs !== null && r.precisionMs > EXACT_PRECISION_MS ? t.wResetNear(clock) : clock;
 }
 
-const isLow = (tone: DisplayTone) => tone === "low" || tone === "critical";
+const isLow = (tone: DisplayTone) => tone === "low" || tone === "critical" || tone === "empty";
 
 /** The compact note for a low window: the shown low window with the least remaining, ties to 5-hour. */
 function lowNote(p: WidgetProvider, now: number, t: Dict, lang: Lang): { text: string; tone: WTone } | null {
@@ -65,7 +65,7 @@ function lowNote(p: WidgetProvider, now: number, t: Dict, lang: Lang): { text: s
   const reset = useFive ? p.fiveHourReset : p.weeklyReset;
   const when = noteWhen(reset, !p.showFiveHour, now, t, lang);
   const tone = useFive ? p.fiveHourTone : p.weeklyTone;
-  return { text: `${useFive ? t.wFiveHour : t.wWeekly} ${when}`, tone: p.state === "paused" ? "muted" : tone === "critical" ? "critical" : "warning" };
+  return { text: `${useFive ? t.wFiveHour : t.wWeekly} ${when}`, tone: p.state === "paused" ? "muted" : tone === "critical" || tone === "empty" ? "critical" : "warning" };
 }
 
 /** How each kind of old data is said: amber may be stale, red stale, and quiet for a passive source's normal state. */

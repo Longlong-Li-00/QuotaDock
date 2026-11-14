@@ -5,7 +5,7 @@ export type WindowType = "five_hour" | "weekly";
 export type ResetSchedule = "confirmed" | "sliding" | "unconfirmed" | "passed";
 export type Severity = "normal" | "warning" | "critical" | "error";
 /** Colour of a remaining value, decided in Rust. Never read from or by the notification rules. */
-export type DisplayTone = "normal" | "low" | "critical" | "muted" | "unknown";
+export type DisplayTone = "normal" | "caution" | "low" | "critical" | "empty" | "muted" | "unknown";
 export type Freshness = "no_data" | "fresh" | "maybe_stale" | "stale";
 export type Risk = "insufficient_data" | "low" | "watch" | "at_risk";
 export type ForecastStatus = "ok" | "insufficient_data" | "not_projected" | "reset_schedule_unconfirmed";

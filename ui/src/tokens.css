@@ -49,6 +49,7 @@
   --accent: #0067c0;
   --on-accent: #ffffff;
   --ok: #0f7b0f;
+  --caution: #7a6a00;
   --warn: #9d5d00;
   --crit: #c42b1c;
   --focus: #1a1a1a;
@@ -81,6 +82,7 @@
     --accent: #4cc2ff;
     --on-accent: #000000;
     --ok: #6ccb5f;
+    --caution: #e6e04f;
     --warn: #f2b84b;
     --crit: #ff99a4;
     --focus: #ffffff;
@@ -106,6 +108,7 @@
   --accent: #4cc2ff;
   --on-accent: #000000;
   --ok: #6ccb5f;
+  --caution: #e6e04f;
   --warn: #f2b84b;
   --crit: #ff99a4;
   --focus: #ffffff;
@@ -144,6 +147,7 @@
     --accent: Highlight;
     --on-accent: HighlightText;
     --ok: CanvasText;
+    --caution: CanvasText;
     --warn: CanvasText;
     --crit: CanvasText;
     --focus: Highlight;

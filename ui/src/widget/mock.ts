@@ -1,5 +1,5 @@
 // Browser-only mock for widget design previews (never used inside Tauri). Fixed scenarios:
-// widget.html?w=normal|low|critical|blocked|sliding|unconfirmed|passed|passedread|missing|approx|stale|staleold|maybestale|notlive|staleerror|waiting|paused|error|signedout|unavailable|notfound|limitunavailable|limitsignedout|limitmaybe|limitstale|limitold|limitpaused|failing|claudenotsetup|claudeapibilling|claudenotfound|claudenotauth|claudeverify|claudeerror|codexonly|claudeonly|none
+// widget.html?w=normal|caution|low|critical|blocked|sliding|unconfirmed|passed|passedread|missing|approx|stale|staleold|maybestale|notlive|staleerror|waiting|paused|error|signedout|unavailable|notfound|limitunavailable|limitsignedout|limitmaybe|limitstale|limitold|limitpaused|failing|claudenotsetup|claudeapibilling|claudenotfound|claudenotauth|claudeverify|claudeerror|codexonly|claudeonly|none
 //   &mode=compact|detailed &theme=system|light|dark &lang=en|zh-CN &opacity=50..100 &locked=1
 //   &five=codex|claude|both (whose 5-hour limit is hidden)
 //   &icons=1 (stand-in custom ring icons, as files in the data folder's icons folder would give)
@@ -80,6 +80,11 @@ export function mockView(params: URLSearchParams, now: number): WidgetView {
   let claude: WidgetProvider | null = provider(now, "claude", 61, 72, { updatedAtMs: claudeAt });
   let paused = false;
   switch (scenario) {
+    case "caution":
+      // The yellow level: 50 % and below, up to 30 %.
+      codex = provider(now, "codex", 48, 45, { updatedAtMs: fresh });
+      claude = provider(now, "claude", 50, 35, { updatedAtMs: claudeAt });
+      break;
     case "low":
       // Codex's lowest is weekly; Claude's two windows tie, so a note would name 5-hour.
       codex = provider(now, "codex", 28, 22, { updatedAtMs: fresh, severity: "warning" });

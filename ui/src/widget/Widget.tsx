@@ -194,9 +194,13 @@ function Gauge({ r, icon }: { r: RingView; icon: string | undefined }) {
 function Arc({ ring, value, tone, inner = false }: { ring: { r: number; w: number }; value: number | null; tone: DisplayTone; inner?: boolean }) {
   const c = 2 * Math.PI * ring.r;
   const part = barWidth(value) / 100;
+  // Like a phone's battery: a low ring tints its track with its tone, and an empty one (limit reached,
+  // nothing to draw) is the whole ring in that tone, so the state reads from the ring alone.
+  const alert = tone === "caution" || tone === "low" || tone === "critical" || tone === "empty";
+  const track = `w-ring-track${alert ? (part > 0 ? " w-ring-track-alert" : " w-ring-track-empty") : ""}`;
   return (
     <g className={`w-t-${tone}${inner ? " w-ring-inner" : ""}`}>
-      <circle className="w-ring-track" cx={GAUGE / 2} cy={GAUGE / 2} r={ring.r} strokeWidth={ring.w} />
+      <circle className={track} cx={GAUGE / 2} cy={GAUGE / 2} r={ring.r} strokeWidth={ring.w} />
       {part > 0 && <circle className="w-ring-fill" cx={GAUGE / 2} cy={GAUGE / 2} r={ring.r} strokeWidth={ring.w} strokeDasharray={c} strokeDashoffset={c * (1 - part)} />}
     </g>
   );

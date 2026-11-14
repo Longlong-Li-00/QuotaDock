@@ -15,6 +15,8 @@ pub const STALE_MS: i64 = 30 * 60_000;
 pub const UNKNOWN_AVAILABILITY_PERSIST_SNAPSHOTS: u32 = 3;
 pub const CRITICAL_REMAINING_PCT: f64 = 10.0;
 pub const WARNING_REMAINING_PCT: f64 = 30.0;
+/// Display only (colour): a value at or below this is yellow. Reminders and severity never read it.
+pub const CAUTION_REMAINING_PCT: f64 = 50.0;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Serialize)]
 #[serde(rename_all = "lowercase")]
@@ -50,8 +52,14 @@ pub enum TrayIconKind {
 #[serde(rename_all = "lowercase")]
 pub enum DisplayTone {
     Normal,
+    /// 50 % or less: yellow.
+    Caution,
+    /// 30 % or less: amber.
     Low,
+    /// 10 % or less: red.
     Critical,
+    /// Nothing left (0 %): the whole ring in red.
+    Empty,
     Muted,
     Unknown,
 }
@@ -136,8 +144,10 @@ pub fn rule_remaining(w: &crate::storage::snapshots::WindowView) -> Option<f64> 
 pub fn display_tone(remaining: Option<f64>, current: bool) -> DisplayTone {
     match remaining {
         None => DisplayTone::Unknown,
+        Some(r) if r <= 0.0 => DisplayTone::Empty,
         Some(r) if r <= CRITICAL_REMAINING_PCT => DisplayTone::Critical,
         Some(r) if r <= WARNING_REMAINING_PCT => DisplayTone::Low,
+        Some(r) if r <= CAUTION_REMAINING_PCT => DisplayTone::Caution,
         Some(_) if current => DisplayTone::Normal,
         Some(_) => DisplayTone::Muted,
     }

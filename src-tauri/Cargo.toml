@@ -1,10 +1,10 @@
 [package]
 name = "quotadock-app"
-version = "1.1.0-rc.1"
+version = "1.1.0-rc.2"
 edition = "2024"
 
 [dependencies]
-quotadock-core = { version = "1.1.0-rc.1", path = "../crates/quotadock-core" }
+quotadock-core = { version = "1.1.0-rc.2", path = "../crates/quotadock-core" }
 serde = { version = "1.0.229", features = ["derive"] }
 serde_json = "1.0.151"
 tauri = { version = "2", features = ["tray-icon", "image-png"] }

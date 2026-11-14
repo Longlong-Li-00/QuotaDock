@@ -116,7 +116,7 @@ export function windowTone(w: WindowStatus, tone: DisplayTone | undefined): Disp
 
 /** The words that go with a low tone, so colour is never the only signal. */
 export function toneLabel(tone: DisplayTone, t: Dict): string | null {
-  if (tone === "critical") return t.toneCritical;
+  if (tone === "critical" || tone === "empty") return t.toneCritical;
   if (tone === "low") return t.toneLow;
   return null;
 }

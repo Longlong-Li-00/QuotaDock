@@ -2883,7 +2883,7 @@ dependencies = [
 
 [[package]]
 name = "quotadock-app"
-version = "1.1.0-rc.1"
+version = "1.1.0-rc.2"
 dependencies = [
  "quotadock-core",
  "serde",
@@ -2898,7 +2898,7 @@ dependencies = [
 
 [[package]]
 name = "quotadock-core"
-version = "1.1.0-rc.1"
+version = "1.1.0-rc.2"
 dependencies = [
  "chrono",
  "dirs 7.0.0",

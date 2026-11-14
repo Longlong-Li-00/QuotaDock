@@ -93,14 +93,16 @@ strong, b { font-weight: 600; }
 .big-num { font: var(--type-hero); font-variant-numeric: tabular-nums; }
 .big-unit { font: var(--type-hero-unit); }
 .big-word { margin-left: var(--space-8); color: var(--text-2); }
+.tone-caution { color: var(--caution); }
 .tone-low { color: var(--warn); }
-.tone-critical { color: var(--crit); }
+.tone-critical, .tone-empty { color: var(--crit); }
 .tone-muted, .tone-unknown { color: var(--text-2); }
 .meter { height: var(--meter-height); border-radius: var(--radius-meter); background: var(--meter-track); overflow: hidden; }
 .meter-fill { height: 100%; border-radius: var(--radius-meter); transition: width var(--motion-slow) var(--ease); }
 .meter-normal { background: var(--accent); }
+.meter-caution { background: var(--caution); }
 .meter-low { background: var(--warn); }
-.meter-critical { background: var(--crit); }
+.meter-critical, .meter-empty { background: var(--crit); }
 .meter-muted, .meter-unknown { background: var(--text-2); }
 .reset { font: var(--type-body); color: var(--text); }
 .forecast-note { color: var(--warn); }

@@ -616,17 +616,23 @@ fn with_remaining(five: f64, week: f64) -> MonitorFacts {
 #[test]
 fn display_tone_boundaries() {
     use DisplayTone::*;
-    assert_eq!(display_tone(Some(30.1), true), Normal);
+    // Four levels: 50 % yellow, 30 % amber, 10 % red, 0 % empty (the whole ring red).
+    assert_eq!(display_tone(Some(50.1), true), Normal);
+    assert_eq!(display_tone(Some(50.0), true), Caution);
+    assert_eq!(display_tone(Some(30.1), true), Caution);
     assert_eq!(display_tone(Some(30.0), true), Low);
     assert_eq!(display_tone(Some(10.1), true), Low);
     assert_eq!(display_tone(Some(10.0), true), Critical);
+    assert_eq!(display_tone(Some(0.1), true), Critical);
+    assert_eq!(display_tone(Some(0.0), true), Empty);
     assert_eq!((display_tone(None, true), display_tone(None, false)), (Unknown, Unknown));
     // Stale high goes muted; stale low stays: a value can only fall inside one window.
-    assert_eq!((display_tone(Some(80.0), false), display_tone(Some(30.1), false)), (Muted, Muted));
+    assert_eq!((display_tone(Some(80.0), false), display_tone(Some(50.1), false)), (Muted, Muted));
+    assert_eq!((display_tone(Some(50.0), false), display_tone(Some(30.1), false)), (Caution, Caution));
     assert_eq!((display_tone(Some(30.0), false), display_tone(Some(10.1), false)), (Low, Low));
-    assert_eq!((display_tone(Some(10.0), false), display_tone(Some(0.0), false)), (Critical, Critical));
-    let names: Vec<Value> = [Normal, Low, Critical, Muted, Unknown].iter().map(|t| serde_json::to_value(t).unwrap()).collect();
-    assert_eq!(names, vec![json!("normal"), json!("low"), json!("critical"), json!("muted"), json!("unknown")]);
+    assert_eq!((display_tone(Some(10.0), false), display_tone(Some(0.0), false)), (Critical, Empty));
+    let names: Vec<Value> = [Normal, Caution, Low, Critical, Empty, Muted, Unknown].iter().map(|t| serde_json::to_value(t).unwrap()).collect();
+    assert_eq!(names, vec![json!("normal"), json!("caution"), json!("low"), json!("critical"), json!("empty"), json!("muted"), json!("unknown")]);
 }
 
 /// The separation itself: colour follows remaining percent, severity and reasons follow reminders.
@@ -678,7 +684,7 @@ fn codex_tone_follows_freshness_and_pause() {
 fn codex_tone_is_unknown_without_a_usable_current_value() {
     let s = NotificationSettings::default();
     let five_tone = |change: &dyn Fn(&mut WindowView)| {
-        let mut f = with_remaining(40.0, 60.0);
+        let mut f = with_remaining(60.0, 60.0);
         change(&mut f.latest.as_mut().unwrap().five_hour);
         tray(&f, None, &s, false, Lang::En).providers[0].five_hour_tone
     };

@@ -34,14 +34,14 @@ body {
 /* Over a wallpaper the secondary colour is not enough: every word uses the primary one, with a halo.
    The tones are lifted so a value clears 4.5:1 at the default 85 % over flat white and black (a lower
    opacity may not); the main window and 100 % keep the tokens. */
-.w-see-through { --text-2: var(--text); --warn: #8a5100; --crit: #b42619; text-shadow: 0 0 2px var(--surface), 0 0 4px var(--surface); }
+.w-see-through { --text-2: var(--text); --caution: #6b5e00; --warn: #8a5100; --crit: #b42619; text-shadow: 0 0 2px var(--surface), 0 0 4px var(--surface); }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) { --t-quiet: #a8a8a8; }
-  :root:not([data-theme="light"]) .w-see-through { --warn: #f2b84b; --crit: #ffa3ad; --t-quiet: #c0c0c0; }
+  :root:not([data-theme="light"]) .w-see-through { --caution: #e6e04f; --warn: #f2b84b; --crit: #ffa3ad; --t-quiet: #c0c0c0; }
 }
 :root[data-theme="dark"] { --t-quiet: #a8a8a8; }
-:root[data-theme="dark"] .w-see-through { --warn: #f2b84b; --crit: #ffa3ad; --t-quiet: #c0c0c0; }
+:root[data-theme="dark"] .w-see-through { --caution: #e6e04f; --warn: #f2b84b; --crit: #ffa3ad; --t-quiet: #c0c0c0; }
 
 .w-head { display: flex; align-items: center; gap: var(--space-8); height: 20px; border-radius: var(--radius-control); }
 .w-label { color: var(--text-2); white-space: nowrap; }
@@ -68,8 +68,9 @@ body {
    primary text like the Overview hero; the others colour value and ring, and the quiet ones also drop
    the value's weight. */
 .w-t-normal { --t: var(--text); }
+.w-t-caution { --t: var(--caution); }
 .w-t-low { --t: var(--warn); }
-.w-t-critical { --t: var(--crit); }
+.w-t-critical, .w-t-empty { --t: var(--crit); }
 .w-t-muted, .w-t-unknown { --t: var(--t-quiet); --t-weight: 400; }
 
 /* Detailed layout: a ring per provider, weekly outside and in the big number, 5-hour inside and on
@@ -83,12 +84,16 @@ body {
 .w-ring-gauge { position: relative; flex: none; width: 52px; height: 52px; }
 .w-ring-gauge > svg { display: block; }
 .w-ring-track { stroke: var(--meter-track); }
+/* Low or critical: the track takes the tone (the tray icon does the same); with nothing left to draw the
+   ring is that tone all round. */
+.w-ring-track-alert { stroke: color-mix(in srgb, var(--t) 32%, var(--meter-track)); }
+.w-ring-track-empty { stroke: color-mix(in srgb, var(--t) 85%, var(--meter-track)); }
 .w-ring-fill { stroke: var(--t); transition: stroke-dashoffset var(--motion-slow) var(--ease); }
 /* A normal 5-hour ring is quieter than the weekly one; a low one takes its tone like any value. */
 :root { --ring-five: color-mix(in srgb, var(--text) 45%, var(--surface)); }
 .w-ring-inner.w-t-normal { --t: var(--ring-five); }
 .w-ring-icon { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--text-2); }
-.w-ring-icon.w-t-low, .w-ring-icon.w-t-critical { color: var(--t); }
+.w-ring-icon.w-t-low, .w-ring-icon.w-t-critical, .w-ring-icon.w-t-empty { color: var(--t); }
 .w-ring-icon > svg, .w-ring-icon > img { display: block; width: 20px; height: 20px; object-fit: contain; }
 .w-ring-text { flex: 1; min-width: 0; display: flex; flex-direction: column; }
 .w-ring-line { height: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -109,6 +114,7 @@ body {
   .w-see-through,
   :root:not([data-theme="light"]) .w-see-through,
   :root[data-theme="dark"] .w-see-through {
+    --caution: CanvasText;
     --warn: CanvasText;
     --crit: CanvasText;
     --t-quiet: CanvasText;
@@ -116,6 +122,8 @@ body {
   .w { background: Canvas; }
   .w-ring-gauge > svg { forced-color-adjust: none; }
   .w-ring-track { stroke: GrayText; }
+  .w-ring-track-alert { stroke: GrayText; }
+  .w-ring-track-empty { stroke: CanvasText; stroke-dasharray: 3 3; }
   .w-ring-fill { stroke: CanvasText; }
   .w-ring-icon { color: CanvasText; }
   .w-ring-sep { background: CanvasText; }

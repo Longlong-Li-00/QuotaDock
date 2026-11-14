@@ -67,6 +67,16 @@ describe("widget tones below 100 %", () => {
     assert.match(rule(widget, ".w-ring-inner.w-t-normal"), /--t: var\(--ring-five\)/);
   });
 
+  it("a low ring tints its track, an empty one is the tone all round (so 0 % left still shows red)", () => {
+    assert.match(rule(widget, ".w-ring-track-alert"), /color-mix\(in srgb, var\(--t\) 32%/);
+    assert.match(rule(widget, ".w-ring-track-empty"), /color-mix\(in srgb, var\(--t\) 85%/);
+    const src = readFileSync(new URL("./Widget.tsx", import.meta.url), "utf8");
+    assert.match(src, /w-ring-track-empty/);
+    assert.match(src, /tone === "caution" \|\| tone === "low" \|\| tone === "critical" \|\| tone === "empty"/);
+    assert.match(rule(widget, ".w-t-caution"), /--t: var\(--caution\)/);
+    assert.match(rule(widget, ".w-t-critical, .w-t-empty"), /--t: var\(--crit\)/);
+  });
+
   it("the system dark theme and the chosen dark theme say the same", () => {
     assert.equal(rule(widget, ':root:not([data-theme="light"]) .w-see-through'), darkSeeThrough);
   });
@@ -75,9 +85,11 @@ describe("widget tones below 100 %", () => {
     const cases: [string, string, string][] = [
       ["light --warn", token(lightSeeThrough, "--warn"), lightSurface],
       ["light --crit", token(lightSeeThrough, "--crit"), lightSurface],
+      ["light --caution", token(lightSeeThrough, "--caution"), lightSurface],
       ["light quiet", token(rule(widget, ":root"), "--t-quiet"), lightSurface],
       ["dark --warn", token(darkSeeThrough, "--warn"), darkSurface],
       ["dark --crit", token(darkSeeThrough, "--crit"), darkSurface],
+      ["dark --caution", token(darkSeeThrough, "--caution"), darkSurface],
       ["dark quiet", token(darkSeeThrough, "--t-quiet"), darkSurface],
     ];
     for (const [name, text, surface] of cases) {
