@@ -6,6 +6,7 @@
 ![Version](https://img.shields.io/badge/version-1.1.0--rc.2-orange)
 ![Local only](https://img.shields.io/badge/data-local%20only-2ea44f)
 ![Built with](https://img.shields.io/badge/built%20with-Rust%20%2B%20Tauri%202%20%2B%20React-555)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
 QuotaDock 是一个 Windows 小工具。它在主窗口、桌面浮窗、托盘图标和 Windows 通知里显示 **Codex（OpenAI）** 和 **Claude（Anthropic）** 的 **5 小时额度** 和 **每周额度**：还剩多少，什么时候重置。
 
@@ -229,7 +230,7 @@ node --test "src/**/*.test.ts"
 - 带“预计”“估算”字样的内容是 QuotaDock 自己推算的，不是服务方给出的数字。
 - 手册目前只有中文版。程序界面有中文和英文。
 - 本项目和 OpenAI、Anthropic 没有关系。Codex、Claude 是各自公司的商标。
-- 仓库里 **还没有开源许可证**。
+- 本项目使用 [MIT 许可证](LICENSE)：可以自由使用、修改和分发，保留版权声明即可。
 
 ---
 
@@ -255,4 +256,4 @@ powershell -ExecutionPolicy Bypass -File scripts\package-windows.ps1
 
 The installer is not code-signed yet, so SmartScreen will warn: choose *More info → Run anyway*. You need Codex and/or Claude Code installed and signed in (Claude with a subscription, not API billing).
 
-**Status:** 1.1.0-rc.2, a release candidate. Windows 11 x64 only. The full manual ([docs/MANUAL.md](docs/MANUAL.md)) is in Chinese. There is no licence yet. This project is not affiliated with OpenAI or Anthropic.
+**Status:** 1.1.0-rc.2, a release candidate. Windows 11 x64 only. The full manual ([docs/MANUAL.md](docs/MANUAL.md)) is in Chinese. Licensed under the [MIT License](LICENSE). This project is not affiliated with OpenAI or Anthropic.
