@@ -659,7 +659,7 @@ npm run soak:report -- --days 7
 
 ## 附录 E：真实窗口截图
 
-只截 QuotaDock 自己的窗口，位于 `docs/phase3/`：
+只截 QuotaDock 自己的窗口，位于 [`phase3/`](phase3/)：
 
 - `01-overview-zh-idle-sliding.png`：中文空闲态，5h 显示就绪和 "恢复使用后确认计时"
 - `02-close-to-tray-hint-zh.png`：关闭到托盘的提示

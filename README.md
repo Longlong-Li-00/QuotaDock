@@ -214,10 +214,9 @@ node --test "src/**/*.test.ts"
 | `src-tauri` | Tauri 2 桌面程序：窗口、浮窗、托盘、通知、开机自启，以及 NSIS 安装程序脚本（`windows/`） |
 | `ui` | React + TypeScript 界面：主窗口和浮窗 |
 | `scripts` | 打包脚本 `package-windows.ps1` 和开发辅助脚本 |
-| `src`, `tests` | 早期 TypeScript 参考实现及其测试（Phase 1） |
+| `src`, `tests` | 早期 TypeScript 参考实现及其测试；`tests/fixtures` 里的数据也被 Rust 测试使用 |
 | `docs` | 使用手册、PDF 和截图 |
-| `*_FINDINGS.md` | 每个开发阶段的验收和测试记录 |
-| `POST_V1_BACKLOG.md` | 待办和已知问题清单 |
+| `docs/development` | 每个开发阶段的验收和测试记录、待办清单（[索引](docs/development/README.md)） |
 
 ---
 
