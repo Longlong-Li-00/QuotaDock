@@ -690,12 +690,47 @@ fn codex_tone_is_unknown_without_a_usable_current_value() {
     };
     assert_eq!(five_tone(&|_| {}), DisplayTone::Normal);
     assert_eq!(five_tone(&|w| w.present = false), DisplayTone::Unknown, "missing window");
-    assert_eq!(five_tone(&|w| w.quality = "transient".into()), DisplayTone::Unknown, "not normal quality");
+    assert_eq!(five_tone(&|w| w.quality = "missing_window".into()), DisplayTone::Unknown, "not normal quality");
+    assert_eq!(five_tone(&|w| w.quality = "account_mismatch".into()), DisplayTone::Unknown, "another account");
     assert_eq!(five_tone(&|w| w.remaining_percent = None), DisplayTone::Unknown);
     assert_eq!(five_tone(&|w| w.reset_at_ms = Some(T0)), DisplayTone::Unknown, "the reset time has passed");
     assert_eq!(five_tone(&|w| w.reset_at_ms = None), DisplayTone::Normal, "no reset time is not a passed one");
     let none = tray(&MonitorFacts::default(), None, &s, false, Lang::En);
     assert_eq!((none.providers[0].five_hour_tone, none.providers[0].weekly_tone), (DisplayTone::Unknown, DisplayTone::Unknown));
+}
+
+/// Backlog 62: Codex's weekly reset time jitters by a second, and every other read is held back as
+/// suspect_transient. Its colour must not drop to grey each time: a value the detector has not accepted
+/// yet colours like a stale one, so a low value keeps its tone and a high one goes muted.
+#[test]
+fn a_held_back_codex_value_keeps_a_low_tone() {
+    let s = NotificationSettings::default();
+    let weekly_tone = |remaining: f64, quality: &str| {
+        let mut f = with_remaining(100.0, remaining);
+        f.latest.as_mut().unwrap().weekly.quality = quality.into();
+        tray(&f, None, &s, false, Lang::En).providers[0].weekly_tone
+    };
+    for q in ["suspect_transient", "pending_confirmation"] {
+        assert_eq!(weekly_tone(44.0, q), DisplayTone::Caution, "{q}");
+        assert_eq!(weekly_tone(25.0, q), DisplayTone::Low, "{q}");
+        assert_eq!(weekly_tone(5.0, q), DisplayTone::Critical, "{q}");
+        assert_eq!(weekly_tone(0.0, q), DisplayTone::Empty, "{q}");
+        assert_eq!(weekly_tone(80.0, q), DisplayTone::Muted, "{q}: a high value it has not accepted does not look healthy");
+    }
+    assert_eq!(weekly_tone(44.0, "normal"), DisplayTone::Caution);
+
+    // Display only: the rules still skip the held-back read.
+    let mut f = with_remaining(100.0, 25.0);
+    f.latest.as_mut().unwrap().weekly.quality = "suspect_transient".into();
+    let m = tray(&f, None, &s, false, Lang::En);
+    assert!(!m.reasons.contains(&"weekly_remaining_30"), "{:?}", m.reasons);
+
+    // A passed reset still has no tone.
+    let mut f = with_remaining(100.0, 25.0);
+    let w = &mut f.latest.as_mut().unwrap().weekly;
+    w.quality = "suspect_transient".into();
+    w.reset_at_ms = Some(T0);
+    assert_eq!(tray(&f, None, &s, false, Lang::En).providers[0].weekly_tone, DisplayTone::Unknown);
 }
 
 // --------------------------------------------------------------------------- tray menu rows

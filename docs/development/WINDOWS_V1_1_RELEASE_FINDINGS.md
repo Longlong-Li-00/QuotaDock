@@ -96,3 +96,22 @@ Note: the exe the installer put in the folder (SHA-256 `4ADBB03D…87B0`, writte
 `target\release\quotadock-app.exe` (`CF0E3FB4…E4B6`, 21:55:54) although both are 16 645 120 B; the
 bundler rewrites the exe after embedding it. The bridge matches (`774CA1CF…FF9FA`). The installed hash
 is the one to quote for this build.
+
+## 6. Reinstall of 1.1.0-rc.2 from the GitHub Actions build (2026-11-15)
+
+The installer built by `.github/workflows/build-windows.yml` (run 43687718931, commit 0f3bbf1 on the
+public repository; SHA-256 `86805DCF…A093`, 4 412 934 B, not signed) was installed over the production
+1.1.0-rc.2 with the user's consent ("装吧"), to check that a CI build installs and runs like the local one.
+
+| Check | Result |
+|---|---|
+| Online backup before | `.soak-backups\quotadock-pre-110rc2ci-20261115.sqlite3`, integrity ok, row counts match (17 196 snapshots) |
+| Quit | `--quit` through explorer; app_stop 17:34:40, no process left |
+| Installer pages | welcome → maintenance page "QuotaDock 1.1.0-rc.2 已经安装了" (reinstall preselected) → folder page **pre-filled** with the right path (backlog 60 did not reproduce) → done → finish with "运行 QuotaDock" and desktop shortcut ticked |
+| State diff (pre vs post) | only pid and the two program files changed: app `16 662 528 B C0D87CCC…`, bridge `2 186 752 B 399E3389…`. Run value, StartupApproved, uninstall entry, shortcuts, data files, all `before-*` backups (including `before-1.1.0-rc.2`, so backlog 56's fix holds on a same-version reinstall) and `settings.json` `B8842AAE8A728611` are identical |
+| App start | `app_start version 1.1.0-rc.2 launch normal` 17:35:52, widget restored (detailed, 55 %, locked), `claude_env` signed in |
+| First polls | Codex engine state and Claude observation both at 17:35:54–55; database quick_check ok |
+| Widget with real data | Claude weekly 41 % shown **yellow** (first real sighting of the ≤ 50 % tone). Codex weekly 44 % shown **grey**: backlog 62 |
+
+The CI exe differs from the local build (16 662 528 vs 16 645 120 B; different MSVC toolset on the
+runner). Tests on CI: 295 Rust, 151 UI and 87 reference tests pass, clippy clean.

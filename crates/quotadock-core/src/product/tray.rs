@@ -153,10 +153,22 @@ pub fn display_tone(remaining: Option<f64>, current: bool) -> DisplayTone {
     }
 }
 
-/// A Codex window's tone: rule-valid values only, and a window whose reset time has passed has no
-/// current value.
+/// A Codex window's tone. A window whose reset time has passed has no current value. A value the
+/// detector has not accepted yet (suspect or pending) colours like a stale one: a low value keeps its
+/// tone, a high one goes muted. Codex's weekly reset time jitters by a second and every other read is
+/// held back as suspect, so dropping those reads to Unknown made the ring flip to grey (backlog 62).
+/// Display only: the rules use `rule_remaining`.
 fn codex_tone(w: Option<&crate::storage::snapshots::WindowView>, current: bool, now_ms: i64) -> DisplayTone {
-    display_tone(w.filter(|w| w.reset_at_ms.is_none_or(|r| r > now_ms)).and_then(rule_remaining), current)
+    let Some(w) = w.filter(|w| w.reset_at_ms.is_none_or(|r| r > now_ms)) else {
+        return DisplayTone::Unknown;
+    };
+    if let Some(r) = rule_remaining(w) {
+        return display_tone(Some(r), current);
+    }
+    match w.quality.as_str() {
+        "suspect_transient" | "pending_confirmation" if w.present => display_tone(w.remaining_percent, false),
+        _ => DisplayTone::Unknown,
+    }
 }
 
 /// A Codex value that belongs to the last period: the read was taken before a reset time that has
