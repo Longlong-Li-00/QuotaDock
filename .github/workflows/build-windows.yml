@@ -1,0 +1,122 @@
+# Tests QuotaDock and builds the Windows installer from the source in this repository.
+# The installer is uploaded as a build artifact (not signed yet).
+name: Build Windows installer
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  RUST_TOOLCHAIN: "1.99.0"
+  NODE_VERSION: "24"
+  TAURI_CLI_VERSION: "2.12.4"
+  CARGO_TERM_COLOR: never
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Rust toolchain
+        run: |
+          rustup toolchain install $env:RUST_TOOLCHAIN --profile minimal --component clippy
+          rustup default $env:RUST_TOOLCHAIN
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            ui/package-lock.json
+
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: test-${{ runner.os }}-${{ env.RUST_TOOLCHAIN }}-${{ hashFiles('Cargo.lock') }}
+
+      - name: Install npm dependencies
+        run: |
+          npm ci
+          npm ci --prefix ui
+
+      - name: Rust tests
+        run: cargo test --workspace --locked
+
+      - name: Clippy
+        run: cargo clippy --workspace --all-targets --locked -- -D warnings
+
+      - name: UI type check and tests
+        working-directory: ui
+        run: |
+          node node_modules/typescript/bin/tsc --noEmit -p .
+          node --test "src/**/*.test.ts"
+
+      - name: Reference implementation tests
+        run: |
+          node node_modules/typescript/bin/tsc --noEmit -p .
+          node --test "tests/**/*.test.ts"
+
+  build:
+    needs: test
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Rust toolchain
+        run: |
+          rustup toolchain install $env:RUST_TOOLCHAIN --profile minimal
+          rustup default $env:RUST_TOOLCHAIN
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: ui/package-lock.json
+
+      - name: Cache tauri-cli
+        id: tauri-cli
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: target/tools
+          key: tauri-cli-${{ runner.os }}-${{ env.RUST_TOOLCHAIN }}-${{ env.TAURI_CLI_VERSION }}
+
+      - name: Install tauri-cli
+        if: steps.tauri-cli.outputs.cache-hit != 'true'
+        run: cargo install tauri-cli --version $env:TAURI_CLI_VERSION --locked --root target\tools
+
+      - name: Install UI dependencies
+        run: npm ci --prefix ui
+
+      - name: Build the installer
+        run: powershell -ExecutionPolicy Bypass -File scripts\package-windows.ps1
+
+      - name: Collect the installer
+        id: collect
+        run: |
+          $version = (Get-Content src-tauri\tauri.conf.json -Raw | ConvertFrom-Json).version
+          New-Item -ItemType Directory -Force dist | Out-Null
+          Copy-Item "target\release\bundle\nsis\QuotaDock_${version}_x64-setup.exe" dist\
+          $hash = (Get-FileHash "dist\QuotaDock_${version}_x64-setup.exe" -Algorithm SHA256).Hash
+          "$hash  QuotaDock_${version}_x64-setup.exe" | Out-File -Encoding ascii dist\SHA256SUMS.txt
+          "version=$version" >> $env:GITHUB_OUTPUT
+          "### QuotaDock $version (unsigned)`n`nSHA-256: ``$hash``" >> $env:GITHUB_STEP_SUMMARY
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: QuotaDock-${{ steps.collect.outputs.version }}-unsigned
+          path: dist/
+          if-no-files-found: error
