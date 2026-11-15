@@ -115,3 +115,20 @@ public repository; SHA-256 `86805DCF…A093`, 4 412 934 B, not signed) was insta
 
 The CI exe differs from the local build (16 662 528 vs 16 645 120 B; different MSVC toolset on the
 runner). Tests on CI: 295 Rust, 151 UI and 87 reference tests pass, clippy clean.
+
+## 7. Upgrade 1.1.0-rc.2 → 1.1.0-rc.3 (2026-11-15)
+
+rc.3 = backlog 62 (a held-back Codex value keeps its low tone). Installer from GitHub Actions run
+43696445449 (commit 096f76e; SHA-256 `8703B685…E0AA`, not signed; 296 Rust, 151 UI, 87 reference tests).
+
+| Check | Result |
+|---|---|
+| Online backup before | `.soak-backups\quotadock-pre-110rc3-20261115.sqlite3`, integrity ok, counts match (17 211 snapshots) |
+| Installer pages | welcome → "已安装较早版本" with "覆盖安装并保留数据（推荐）" preselected → folder page pre-filled → done → finish (run + desktop shortcut ticked). Next was sent as `WM_COMMAND IDOK` to the dialog: `BM_CLICK` on the button did nothing once |
+| State diff | version 1.1.0-rc.3 in the uninstall entry, new exe / bridge / uninstaller hashes (app `F5D8B15A…`), new `backups\before-1.1.0-rc.3\`; Run value, StartupApproved, shortcuts, data files, older backups and `settings.json` `B8842AAE8A728611` unchanged |
+| App start | `app_start version 1.1.0-rc.3 launch normal` 18:06:08, widget restored, Claude signed in, first polls 18:06:10 / 18:06:27, quick_check ok |
+| Widget, 18:06–18:32 (6 shots) | Codex weekly 42 % yellow, Claude weekly 40 % yellow in every shot |
+
+NOT OBSERVED: a `suspect_transient` Codex read on rc.3. All six polls from 18:06 to 18:31 were `normal`
+(the weekly reset time stayed at 20:48:39), so the fixed path ran only in the unit test
+`a_held_back_codex_value_keeps_a_low_tone`, not yet with real data.
