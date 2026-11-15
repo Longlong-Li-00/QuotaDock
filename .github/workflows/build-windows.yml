@@ -51,17 +51,19 @@ jobs:
           npm ci
           npm ci --prefix ui
 
+      # The app crate embeds ui/dist at compile time, so the UI is built before the Rust tests.
+      - name: UI type check, tests and build
+        working-directory: ui
+        run: |
+          node node_modules/typescript/bin/tsc --noEmit -p .
+          node --test "src/**/*.test.ts"
+          node node_modules/vite/bin/vite.js build
+
       - name: Rust tests
         run: cargo test --workspace --locked
 
       - name: Clippy
         run: cargo clippy --workspace --all-targets --locked -- -D warnings
-
-      - name: UI type check and tests
-        working-directory: ui
-        run: |
-          node node_modules/typescript/bin/tsc --noEmit -p .
-          node --test "src/**/*.test.ts"
 
       - name: Reference implementation tests
         run: |
