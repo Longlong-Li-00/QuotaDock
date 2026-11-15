@@ -1,6 +1,6 @@
 # QuotaDock 使用手册
 
-适用版本：**1.1.0-rc.3**　系统：**Windows 11**　语言：中文（软件本身也有英文界面，在 设置 → 语言 里切换）
+适用版本：**1.1.0**　系统：**Windows 11**　语言：中文（软件本身也有英文界面，在 设置 → 语言 里切换）
 
 > 本手册里的截图都是在 Windows 11 上用真实运行的 QuotaDock 拍摄的（深色主题），图中的数字是作者自己账号的用量。
 > 安装向导里的用户名已经遮盖，写成了 `<用户名>`。
@@ -87,13 +87,13 @@ QuotaDock 是一个运行在 Windows 上的小工具，让你随时看到自己�
 
 ### 方式 A：用安装包（推荐）
 
-1. 打开本仓库的 **Releases** 页面，下载 `QuotaDock_1.1.0-rc.3_x64-setup.exe`。
+1. 打开本仓库的 **Releases** 页面，下载 `QuotaDock_1.1.0_x64-setup.exe`。
    （如果 Releases 里还没有安装包，说明作者还没有发布，请用方式 B 自己构建。）
 2. 双击运行。
 3. 如果 Windows 弹出蓝色的“Windows 已保护你的电脑”（SmartScreen）：这是因为 **这个安装包目前没有代码签名证书**，Windows 不认识发布者。点 **更多信息 → 仍要运行**。你也可以先用下面的命令查看文件的 SHA-256，和 Releases 页面写的值对一下：
 
    ```powershell
-   Get-FileHash .\QuotaDock_1.1.0-rc.3_x64-setup.exe -Algorithm SHA256
+   Get-FileHash .\QuotaDock_1.1.0_x64-setup.exe -Algorithm SHA256
    ```
 
 4. 按向导走：
@@ -157,7 +157,7 @@ powershell -ExecutionPolicy Bypass -File scripts\package-windows.ps1
 构建完成后，安装包在：
 
 ```
-target\release\bundle\nsis\QuotaDock_1.1.0-rc.3_x64-setup.exe
+target\release\bundle\nsis\QuotaDock_1.1.0_x64-setup.exe
 ```
 
 双击它，然后按方式 A 的第 4 步安装。
@@ -579,7 +579,7 @@ QuotaDock 同时只会运行一个，它已经在托盘里了。右键托盘图�
 ## 15. 已知限制
 
 - **只支持 Windows 11（64 位）**。没有 macOS 和 Linux 版。
-- 当前是 **候选版本（1.1.0-rc.3）**，并且 **安装包没有代码签名**。
+- 当前版本 1.1.0 的 **安装包没有代码签名**。
 - Codex 和 Claude Code 都没有公开的“查额度”接口，QuotaDock 的读取方式依赖它们现在的行为。**它们如果大改，QuotaDock 可能需要更新**；这时会提示“版本尚未验证”或“需要验证”，而不是显示错误的数字。
 - 带“预计”“估算”字样的内容，是 QuotaDock 自己根据近期用量推算的，**不是服务方提供的数字**。
 - Claude 的数据可能比 Codex 稀疏：主动刷新有间隔，状态栏桥接只在 Claude Code 更新状态栏时才有数据。

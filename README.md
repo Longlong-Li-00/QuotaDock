@@ -3,7 +3,7 @@
 **在 Windows 上随时看到 Codex 和 Claude 订阅还剩多少额度。**
 
 ![Platform](https://img.shields.io/badge/platform-Windows%2011%20x64-0078D4)
-![Version](https://img.shields.io/badge/version-1.1.0--rc.3-orange)
+![Version](https://img.shields.io/badge/version-1.1.0-blue)
 ![Local only](https://img.shields.io/badge/data-local%20only-2ea44f)
 ![Built with](https://img.shields.io/badge/built%20with-Rust%20%2B%20Tauri%202%20%2B%20React-555)
 ![License](https://img.shields.io/badge/license-MIT-blue)
@@ -223,7 +223,7 @@ node --test "src/**/*.test.ts"
 
 ## 当前状态和已知限制
 
-- **版本：1.1.0-rc.3（候选版本）。** 作者每天在自己的电脑上使用：1.1.0-rc.1 连续运行了 7.5 天，没有崩溃。
+- **版本：1.1.0。** 作者每天在自己的电脑上使用：1.1.0-rc.1 连续运行了 7.5 天，没有崩溃。
 - **安装包没有代码签名**，所以 Windows 会提示“未知发布者”。
 - **只支持 Windows 11（64 位）。**
 - Codex 和 Claude Code 都没有公开的查额度接口。如果它们大改，QuotaDock 可能需要更新。
@@ -256,4 +256,4 @@ powershell -ExecutionPolicy Bypass -File scripts\package-windows.ps1
 
 The installer is not code-signed yet, so SmartScreen will warn: choose *More info → Run anyway*. You need Codex and/or Claude Code installed and signed in (Claude with a subscription, not API billing).
 
-**Status:** 1.1.0-rc.3, a release candidate. Windows 11 x64 only. The full manual ([docs/MANUAL.md](docs/MANUAL.md)) is in Chinese. Licensed under the [MIT License](LICENSE). This project is not affiliated with OpenAI or Anthropic.
+**Status:** 1.1.0. Windows 11 x64 only. The full manual ([docs/MANUAL.md](docs/MANUAL.md)) is in Chinese. Licensed under the [MIT License](LICENSE). This project is not affiliated with OpenAI or Anthropic.

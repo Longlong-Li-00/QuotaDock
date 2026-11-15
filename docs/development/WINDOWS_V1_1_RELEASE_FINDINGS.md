@@ -132,3 +132,10 @@ rc.3 = backlog 62 (a held-back Codex value keeps its low tone). Installer from G
 NOT OBSERVED: a `suspect_transient` Codex read on rc.3. All six polls from 18:06 to 18:31 were `normal`
 (the weekly reset time stayed at 20:48:39), so the fixed path ran only in the unit test
 `a_held_back_codex_value_keeps_a_low_tone`, not yet with real data.
+
+## 8. 1.1.0 (2026-11-15)
+
+1.1.0 is the 1.1.0-rc.3 source with only the version number changed (user: "出一个正式的 1.1.0"). Before
+that, the rc.3 GitHub release was made the Latest full release. The installer compares versions as semver
+(`nsis_tauri_utils::SemverCompare`), so 1.1.0 counts as newer than 1.1.0-rc.3. Production stays on rc.3
+until the user asks to upgrade.
